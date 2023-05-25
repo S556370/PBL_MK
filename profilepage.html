@@ -1,190 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>User Profile</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" type="text/css" href="styles.css">
-<style>
-body {font-family: "Times New Roman", Georgia, Serif;}
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display";
-  letter-spacing: 5px;
-}
-.w3-margin {
-  margin-top: 80px; /* Add margin-top to create space between navbar and blog entry */
-}
-    /* CSS styles for the profile page */
-    
-    .welcome-message {
-      text-align: right;
-      margin-right: 20px;
-      margin-top: 10px;
-      font-size: 18px;
-      font-weight: bold;
-    }
-    .profile-container {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #f4f4f4;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      display: flex;
-    }
-    .profile-details {
-      flex-grow: 1;
-      margin-right: 20px;
-    }
-    .profile-details label {
-      font-weight: bold;
-    }
-    .profile-details span {
-      padding: 8px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      display: inline-block;
-      min-width: 200px;
-    }
-    .profile-photo {
-      text-align: center;
-      margin-left: auto;
-    }
-    .profile-picture {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #fff;
-      box-shadow: 0 0 0 6px #ccc;
-      overflow: hidden;
-    }
-    .profile-buttons {
-      text-align: center;
-      margin-top: 20px;
-    }
-    .profile-buttons button {
-      margin: 10px;
-      padding: 8px 16px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .profile-buttons button:hover {
-      background-color: #45a049;
-    }
-  </style>
+  <title>Instagram Web Clone Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
   <header>
     <nav>
       <div class="logo">
-        <img src="./images/N-Horiz-Full.png" alt="PBL" style="height: 75px; width: 200px;">
+        <img src="./images/N-Horiz-Full.png" alt="PBL">
       </div>
       <div class="search-bar">
         <input type="text" placeholder="Search">
       </div>
-      <div class="menu">        
-        <button><a href="./feeds.html">Feeds</a></button>
-        <button><a href="./profilepage.html">Profile</a></button>
-        <button ><a href="./statisticspage.html">Statistics</a></button>
-        <button >Notifications</button>
-        <button >Logout</button>
+      <div class="menu">
+        <a href="#">Feeds</a>
+        <a href="#">Profile</a>
+        <a href="#">Statistics</a>
+        <a href="#">Notifications</a>
+        <a href="#">Logout</a>
       </div>
     </nav>
   </header>
-  <h1>User Profile</h1>
-  <div class="welcome-message">
-    Welcome user
-  </div>
-  <div class="profile-container">
-    <div class="profile-details">
-      <div class="profile-details-item">
-        <label for="name">Name:</label>
-        <span id="name">Nithin Kunal Reddy Mandadi</span>
-      </div>
-      <div class="profile-details-item">
-        <label for="email">Email:</label>
-        <span id="email">nkunalreddy2@example.com</span>
-      </div>
-      <div class="profile-details-item">
-        <label for="username">Username:</label>
-        <span id="username">MNKR2001</span>
-      </div>
-      <div class="profile-details-item">
-        <label for="contact-number">Contact Number:</label>
-        <span id="contact-number">+1 660-528-1234</span>
-      </div>
-      <div class="profile-details-item">
-        <label for="location">User's Location:</label>
-        <span id="location">Missouri, USA</span>
-      </div>
-      <div class="profile-buttons">
-        <button id="edit-button" onclick="toggleEdit()">Edit</button>
-      </div>
-    </div>
-    <div class="profile-photo">
-      <img class="profile-picture" src="Mandadi_Image.jpeg">
-    </div>
+
+  <div class="content">
+    <h1>Dashboard</h1>
+    <!-- Your dashboard content goes here -->
   </div>
 
-  <script>
-    var originalFields = {}; // To store the original field values
-
-    function toggleEdit() {
-      var editButton = document.getElementById("edit-button");
-      var profileDetails = document.querySelectorAll(".profile-details span");
-
-      if (editButton.innerText === "Edit") {
-        editButton.innerText = "Cancel";
-        createEditableFields(profileDetails);
-        showResetButton();
-      } else {
-        editButton.innerText = "Edit";
-        restoreOriginalFields(profileDetails);
-        hideResetButton();
-      }
-    }
-
-    function createEditableFields(details) {
-      originalFields = {}; // Clear the original fields object
-
-      details.forEach(function (detail) {
-        var value = detail.innerText;
-        var inputField = document.createElement("input");
-        inputField.value = value;
-        originalFields[detail.id] = value; // Store original field value
-
-        detail.innerHTML = "";
-        detail.appendChild(inputField);
-      });
-    }
-
-    function restoreOriginalFields(details) {
-      details.forEach(function (detail) {
-        detail.innerHTML = originalFields[detail.id];
-      });
-    }
-
-    function showResetButton() {
-      var profileButtons = document.querySelector(".profile-buttons");
-      var resetButton = document.createElement("button");
-      resetButton.textContent = "Reset";
-      resetButton.addEventListener("click", function () {
-        restoreOriginalFields(document.querySelectorAll(".profile-details span"));
-        hideResetButton();
-      });
-      profileButtons.appendChild(resetButton);
-    }
-
-    function hideResetButton() {
-      var resetButton = document.querySelector(".profile-buttons button");
-      resetButton.remove();
-    }
-  </script>
   <footer>
     <p>&copy; 2023 Instagram Clone</p>
   </footer>
