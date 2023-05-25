@@ -1,0 +1,199 @@
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Login</title>
+
+<style>
+
+body {
+
+font-family: Arial, sans-serif;
+
+background-color: #f2f2f2;
+background-image: url("ppp.jpg");
+    background-size: cover;
+padding: 20px;
+
+}
+
+ .container {
+
+max-width: 400px;
+margin: 0 auto;
+
+opacity: 0.9;
+padding: 20px;
+ border: 1px solid #ccc;
+
+border-radius: 5px;
+background-color: #fff;
+}
+
+.container h2 {
+
+text-align: center;
+
+
+ }
+
+
+ .form-group {
+
+margin-bottom: 15px;
+
+ }
+
+
+ .form-group label {
+
+display: block;
+
+ font-weight: bold;
+ margin-bottom: 5px;
+
+ }
+
+
+.form-group input[type="text"],
+
+ .form-group input[type="password"] {
+
+ width: 100%;
+
+ padding: 5px;
+
+ border: 1px solid #ccc;
+
+ border-radius: 3px;
+
+ }
+
+
+ .form-group button {
+
+ width: 100%;
+
+ padding: 10px;
+
+ border: none;
+
+border-radius: 3px;
+
+ background-color: #4CAF50;
+
+ color: #fff;
+
+ font-weight: bold;
+
+ cursor: pointer;
+
+}
+
+
+ .forgot-password {
+
+ text-align: right;
+
+ margin-top: 10px;
+
+ }
+
+
+ .forgot-password a {
+
+ color: #333;
+
+ text-decoration: none;
+
+ }
+
+ </style>
+
+</head>
+
+<body>
+
+ <div class="container">
+
+<h2>Login</h2>
+
+ <form id="login-form" onsubmit="return login()">
+
+ <div class="form-group">
+
+ <label for="email">Email</label>
+
+<input type="text" id="email" required>
+
+</div>
+
+ <div class="form-group">
+
+ <label for="password">Password</label>
+
+ <input type="password" id="password" required>
+
+ </div>
+
+ <div class="form-group">
+
+ <button type="submit">Log In</button>
+
+</div>
+
+ </form>
+
+ <div class="forgot-password">
+
+ <a href="#">Forgot Password?</a>
+
+ </div>
+
+ </div>
+
+
+
+ <script>
+
+ function login() {
+
+ var email = document.getElementById('email').value;
+
+ var password = document.getElementById('password').value;
+
+
+
+ // Perform login validation here
+
+ // You can use additional JavaScript code to validate the input fields
+
+
+
+ // Form submission logic goes here
+
+ // You can send the form data to a server using AJAX or perform any other required operations
+
+
+
+ alert("Login successful!");
+
+ return false; // Prevent form submission
+
+ }
+
+ </script>
+
+</body>
+
+</html>
+
+
+
+
+
+
