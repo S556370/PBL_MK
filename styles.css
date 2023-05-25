@@ -1,0 +1,48 @@
+/* CSS for Instagram Web Clone Dashboard */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    background-color: #f7f7f7;
+    padding: 10px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 120px;
+  }
+  
+  .search-bar input {
+    padding: 5px;
+    width: 200px;
+  }
+  
+  .menu a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .content {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer {
+    background-color: #f7f7f7;
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+  }
+  
+  /* Additional styling and customization as per your requirements */
+  
