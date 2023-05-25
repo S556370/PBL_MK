@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+.w3-margin {
+  margin-top: 80px; /* Add margin-top to create space between navbar and blog entry */
+}
+</style>
+</head>
+<body>  
+
+  <header>
+    <nav>
+      <div class="logo" >
+        <img src="./images/N-Horiz-Full.png" alt="PBL" style="height: 75px; width: 200px;">
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search">
+      </div>
+      <div class="menu">
+        <button><a href="./feeds.html">Feeds</a></button>
+        <button><a href="./profilepage.html">Profile</a></button>
+        <button ><a href="./statisticspage.html">Statistics</a></button>
+        <button >Notifications</button>
+        <button >Logout</button>
+      </div>
+    </nav>
+  </header>
+  
+  <hr>
+
+  
+  <div class="content">
+
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <div class="form-container">
+            <form>
+              <div class="form-field">
+                <label for="project-title">Project Title:</label>
+                <input type="text" id="project-title" name="project-title" required>
+              </div>
+              <div class="form-field">
+                <label for="project-description">Project Description:</label>
+                <textarea id="project-description" name="project-description" required></textarea>
+              </div>
+              <div class="form-field">
+                <label for="attachments">Attachments:</label>
+                <input type="text" id="attachments" name="attachments">
+                <button type="button" onclick="attachFiles()">Attach Files</button>
+              </div>
+              <div class="form-field">
+                <label>Privacy:</label>
+                <div>
+                  <input type="radio" id="private" name="privacy" value="private" checked>
+                  <label for="private">Private</label>
+                </div>
+                <div>
+                  <input type="radio" id="public" name="privacy" value="public">
+                  <label for="public">Public</label>
+                </div>
+              </div>
+             
+              <div class="form-field">
+                <button type="submit">Submit</button>
+                <button type="button" onclick="cancelForm()">Cancel</button>
+              </div>
+            </form>
+          </div>
+        
+        </div>
+      </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 Instagram Clone</p>
+  </footer>
+  
+  <script>
+    // Create the form element
+    
+var formContainer = document.createElement("div");
+formContainer.setAttribute("id", "form-container");
+formContainer.setAttribute("class", "form-container");
+
+// Create the form fields
+var projectTitleLabel = document.createElement("label");
+projectTitleLabel.setAttribute("for", "project-title");
+projectTitleLabel.textContent = "Project Title:";
+var projectTitleInput = document.createElement("input");
+projectTitleInput.setAttribute("type", "text");
+projectTitleInput.setAttribute("id", "project-title");
+projectTitleInput.setAttribute("name", "project-title");
+projectTitleInput.setAttribute("required", "");
+
+var projectDescriptionLabel = document.createElement("label");
+projectDescriptionLabel.setAttribute("for", "project-description");
+projectDescriptionLabel.textContent = "Project Description:";
+var projectDescriptionTextarea = document.createElement("textarea");
+projectDescriptionTextarea.setAttribute("id", "project-description");
+projectDescriptionTextarea.setAttribute("name", "project-description");
+projectDescriptionTextarea.setAttribute("required", "");
+
+var attachmentsLabel = document.createElement("label");
+attachmentsLabel.setAttribute("for", "attachments");
+attachmentsLabel.textContent = "Attachments:";
+var attachmentsInput = document.createElement("input");
+attachmentsInput.setAttribute("type", "text");
+attachmentsInput.setAttribute("id", "attachments");
+attachmentsInput.setAttribute("name", "attachments");
+var attachFilesButton = document.createElement("button");
+attachFilesButton.setAttribute("type", "button");
+attachFilesButton.textContent = "Attach Files";
+attachFilesButton.addEventListener("click", attachFiles);
+
+var privacyLabel = document.createElement("label");
+privacyLabel.textContent = "Privacy:";
+var privateInput = document.createElement("input");
+privateInput.setAttribute("type", "radio");
+privateInput.setAttribute("id", "private");
+privateInput.setAttribute("name", "privacy");
+privateInput.setAttribute("value", "private");
+privateInput.setAttribute("checked", "");
+var privateLabel = document.createElement("label");
+privateLabel.setAttribute("for", "private");
+privateLabel.textContent = "Private";
+
+var publicInput = document.createElement("input");
+publicInput.setAttribute("type", "radio");
+publicInput.setAttribute("id", "public");
+publicInput.setAttribute("name", "privacy");
+publicInput.setAttribute("value", "public");
+var publicLabel = document.createElement("label");
+publicLabel.setAttribute("for", "public");
+publicLabel.textContent = "Public";
+
+var privacyContainer = document.createElement("div");
+privacyContainer.appendChild(privateInput);
+privacyContainer.appendChild(privateLabel);
+privacyContainer.appendChild(publicInput);
+privacyContainer.appendChild(publicLabel);
+
+var submitButton = document.createElement("button");
+submitButton.setAttribute("type", "submit");
+submitButton.textContent = "Submit";
+var cancelButton = document.createElement("button");
+cancelButton.setAttribute("type", "button");
+cancelButton.textContent = "Cancel";
+cancelButton.addEventListener("click", cancelForm);
+
+var form = document.createElement("form");
+form.appendChild(projectTitleLabel);
+form.appendChild(projectTitleInput);
+form.appendChild(projectDescriptionLabel);
+form.appendChild(projectDescriptionTextarea);
+form.appendChild(attachmentsLabel);
+form.appendChild(attachmentsInput);
+form.appendChild(attachFilesButton);
+form.appendChild(privacyLabel);
+form.appendChild(privacyContainer);
+form.appendChild(submitButton);
+form.appendChild(cancelButton);
+
+// Append the form to the form container
+formContainer.appendChild(form);
+
+// Append the form container to the document body or any desired parent element
+document.body.appendChild(formContainer);
+
+  </script>
+
+</body>
+</html>
+
+

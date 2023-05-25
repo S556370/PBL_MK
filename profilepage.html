@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>User Profile</title>
-  <style>
+<title>User Profile</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+.w3-margin {
+  margin-top: 80px; /* Add margin-top to create space between navbar and blog entry */
+}
     /* CSS styles for the profile page */
-    body {
-      font-family: Arial, sans-serif;
-    }
-    h1 {
-      color: #333;
-      text-align: center;
-      margin-top: 20px;
-    }
+    
     .welcome-message {
       text-align: right;
       margin-right: 20px;
@@ -74,6 +79,23 @@
   </style>
 </head>
 <body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="./images/N-Horiz-Full.png" alt="PBL" style="height: 75px; width: 200px;">
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search">
+      </div>
+      <div class="menu">        
+        <button><a href="./feeds.html">Feeds</a></button>
+        <button><a href="./profilepage.html">Profile</a></button>
+        <button ><a href="./statisticspage.html">Statistics</a></button>
+        <button >Notifications</button>
+        <button >Logout</button>
+      </div>
+    </nav>
+  </header>
   <h1>User Profile</h1>
   <div class="welcome-message">
     Welcome user
@@ -163,5 +185,8 @@
       resetButton.remove();
     }
   </script>
+  <footer>
+    <p>&copy; 2023 Instagram Clone</p>
+  </footer>
 </body>
 </html>
