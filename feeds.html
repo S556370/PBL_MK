@@ -296,6 +296,37 @@ function readMore(projectId) {
       console.log("Form canceled");
       closeModal();
     }
+    function openModal() {
+  var formContainer = document.createElement("div");
+  formContainer.className = "modal";
+  formContainer.style.display = "block";
+
+  var formContent = document.createElement("div");
+  formContent.className = "modal-content";
+
+  var closeIcon = document.createElement("span");
+  closeIcon.className = "close";
+  closeIcon.innerHTML = "&times;";
+  closeIcon.onclick = closeModal;
+
+  var formContainerDiv = document.createElement("div");
+  formContainerDiv.className = "form-container";
+
+  var form = document.createElement("form");
+
+  // Add your form fields and elements here
+
+  // Append elements to their respective containers
+  formContainerDiv.appendChild(form);
+  formContent.appendChild(closeIcon);
+  formContent.appendChild(formContainerDiv);
+  formContainer.appendChild(formContent);
+
+  document.body.appendChild(formContainer);
+}
+
   </script>
 </body>
 </html>
+
+
