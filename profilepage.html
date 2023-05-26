@@ -1,209 +1,224 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>User Profile</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link rel="stylesheet" type="text/css" href="styles.css" />
 
-    <style>
-      /* CSS styles for the profile page */
-      body {
-        font-family: Arial, sans-serif;
-      }
-      h1 {
-        color: #333;
-        text-align: center;
-        margin-top: 20px;
-      }
-      .welcome-message {
-        text-align: right;
-        margin-right: 20px;
-        margin-top: 10px;
-        font-size: 18px;
-        font-weight: bold;
-      }
-      .profile-container {
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #f4f4f4;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        display: flex;
-      }
-      .profile-details {
-        flex-grow: 1;
-        margin-right: 20px;
-      }
-      .profile-details label {
-        font-weight: bold;
-      }
-      .profile-details span {
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        display: inline-block;
-        min-width: 200px;
-      }
-      .profile-photo {
-        text-align: center;
-        margin-left: auto;
-      }
-      .profile-picture {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 4px solid #fff;
-        box-shadow: 0 0 0 6px #ccc;
-        overflow: hidden;
-      }
-      .profile-buttons {
-        text-align: center;
-        margin-top: 20px;
-      }
-      .profile-buttons button {
-        margin: 10px;
-        padding: 8px 16px;
-        background-color: #4caf50;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-      .profile-buttons button:hover {
-        background-color: #45a049;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div class="logo">
-          <img
-            src="./images/N-Horiz-Full.png"
-            alt="PBL"
-            style="height: 75px; width: 200px"
-          />
-        </div>
+<head>
+  <title>User Profile</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" type="text/css" href="styles.css" />
 
-        <div class="search-bar">
-          <input type="text" placeholder="Search" />
-        </div>
+  <style>
+    /* CSS styles for the profile page */
+    body {
+      font-family: Arial, sans-serif;
+    }
 
-        <div class="menu">
-          <button><a href="./feeds.html">Feeds</a></button>
+    h1 {
+      color: #333;
+      text-align: center;
+      margin-top: 20px;
+    }
 
-          <button><a href="./profilepage.html">Profile</a></button>
+    .welcome-message {
+      text-align: right;
+      margin-right: 20px;
+      margin-top: 10px;
+      font-size: 18px;
+      font-weight: bold;
+    }
 
-          <button><a href="./statisticspage.html">Statistics</a></button>
+    .profile-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f4f4f4;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      display: flex;
+    }
 
-          <button>Notifications</button>
+    .profile-details {
+      flex-grow: 1;
+      margin-right: 20px;
+    }
 
-          <button>Logout</button>
-        </div>
-      </nav>
-    </header>
-    <h1>User Profile</h1>
-    <div class="welcome-message">Welcome user</div>
-    <div class="profile-container">
-      <div class="profile-details">
-        <div class="profile-details-item">
-          <label for="name">Name:</label>
-          <span id="name">John Doe</span>
-        </div>
-        <div class="profile-details-item">
-          <label for="email">Email:</label>
-          <span id="email">johndoe@example.com</span>
-        </div>
-        <div class="profile-details-item">
-          <label for="username">Username:</label>
-          <span id="username">johndoe123</span>
-        </div>
-        <div class="profile-details-item">
-          <label for="contact-number">Contact Number:</label>
-          <span id="contact-number">+1 123-456-7890</span>
-        </div>
-        <div class="profile-details-item">
-          <label for="location">User's Location:</label>
-          <span id="location">New York, USA</span>
-        </div>
-        <div class="profile-buttons">
-          <button id="edit-button" onclick="toggleEdit()">Edit</button>
-          <button
-            type="submit"
-            id="save-button"
-            style="display: none"
-            onclick="saveProfile()"
-          >
-            Save
-          </button>
-        </div>
+    .profile-details label {
+      font-weight: bold;
+    }
+
+    .profile-details span {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      display: inline-block;
+      min-width: 200px;
+    }
+
+    .profile-photo {
+      text-align: center;
+      margin-left: auto;
+    }
+
+    .profile-picture {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+      box-shadow: 0 0 0 6px #ccc;
+      overflow: hidden;
+    }
+
+    .profile-buttons {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .profile-buttons button {
+      margin: 10px;
+      padding: 8px 16px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .profile-buttons button:hover {
+      background-color: #45a049;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      background-color: #f5f5f5;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="./images/N-Horiz-Full.png" alt="PBL" style="height: 75px; width: 200px" />
       </div>
-      <div class="profile-photo">
-        <img class="profile-picture" src="./images/user-profile.png" />
+
+      <div class="search-bar">
+        <input type="text" placeholder="Search" />
+      </div>
+
+      <div class="menu">
+        <button><a href="./feeds.html">Feeds</a></button>
+
+        <button><a href="./profilepage.html">Profile</a></button>
+
+        <button><a href="./statisticspage.html">Statistics</a></button>
+
+        <button ><a href="./notifications.html">Notifications</a></button>
+
+        <button><a href="./homepage.html">SignOut</a></button>
+      </div>
+    </nav>
+  </header>
+  <div class="welcome-message">Welcome user</div>
+  <div class="profile-container">
+    <div class="profile-details">
+      <div class="profile-details-item">
+        <label for="name">Name:</label>
+        <span id="name">John Doe</span>
+      </div>
+      <div class="profile-details-item">
+        <label for="email">Email:</label>
+        <span id="email">johndoe@example.com</span>
+      </div>
+      <div class="profile-details-item">
+        <label for="username">Username:</label>
+        <span id="username">johndoe123</span>
+      </div>
+      <div class="profile-details-item">
+        <label for="contact-number">Contact Number:</label>
+        <span id="contact-number">+1 123-456-7890</span>
+      </div>
+      <div class="profile-details-item">
+        <label for="location">User's Location:</label>
+        <span id="location">New York, USA</span>
+      </div>
+      <div class="profile-buttons">
+        <button id="edit-button" onclick="toggleEdit()">Edit</button>
+        <button type="submit" id="save-button" style="display: none" onclick="saveProfile()">
+          Save
+        </button>
       </div>
     </div>
+    <div class="profile-photo">
+      <img class="profile-picture" src="./images/user-profile.png" />
+    </div>
+  </div>
 
-    <script>
-      function toggleEdit() {
-        var editButton = document.getElementById("edit-button");
-        var saveButton = document.getElementById("save-button");
-        var fields = document.querySelectorAll(".profile-details span");
+  <script>
+    function toggleEdit() {
+      var editButton = document.getElementById("edit-button");
+      var saveButton = document.getElementById("save-button");
+      var fields = document.querySelectorAll(".profile-details span");
 
-        if (editButton.innerText === "Edit") {
-          editButton.innerText = "Cancel";
-          saveButton.style.display = "inline-block";
+      if (editButton.innerText === "Edit") {
+        editButton.innerText = "Cancel";
+        saveButton.style.display = "inline-block";
 
-          fields.forEach(function (field) {
-            var inputField = document.createElement("input");
-            inputField.value = field.innerText;
-            field.innerHTML = "";
-            field.appendChild(inputField);
-          });
-        } else {
-          editButton.innerText = "Edit";
-          saveButton.style.display = "none";
-
-          fields.forEach(function (field) {
-            var inputField = field.querySelector("input");
-            field.innerHTML = inputField.value;
-          });
-        }
-      }
-
-      function resetFields() {
-        var fields = document.querySelectorAll(".profile-details span");
+        fields.forEach(function (field) {
+          var inputField = document.createElement("input");
+          inputField.value = field.innerText;
+          field.innerHTML = "";
+          field.appendChild(inputField);
+        });
+      } else {
+        editButton.innerText = "Edit";
+        saveButton.style.display = "none";
 
         fields.forEach(function (field) {
           var inputField = field.querySelector("input");
           field.innerHTML = inputField.value;
         });
-
-        var editButton = document.getElementById("edit-button");
-        var saveButton = document.getElementById("save-button");
-
-        editButton.innerText = "Edit";
-        saveButton.style.display = "none";
       }
+    }
 
-      function saveProfile() {
-        var fields = document.querySelectorAll(".profile-details span");
+    function resetFields() {
+      var fields = document.querySelectorAll(".profile-details span");
 
-        fields.forEach(function (field) {
-          var inputField = field.querySelector("input");
-          field.innerHTML = inputField.value;
-        });
+      fields.forEach(function (field) {
+        var inputField = field.querySelector("input");
+        field.innerHTML = inputField.value;
+      });
 
-        var editButton = document.getElementById("edit-button");
-        var saveButton = document.getElementById("save-button");
+      var editButton = document.getElementById("edit-button");
+      var saveButton = document.getElementById("save-button");
 
-        editButton.innerText = "Edit";
-        saveButton.style.display = "none";
-      }
-    </script>
-    <footer>
-      <p>&copy; 2023 Professional Based Learning</p>
-    </footer>
-  </body>
+      editButton.innerText = "Edit";
+      saveButton.style.display = "none";
+    }
+
+    function saveProfile() {
+      var fields = document.querySelectorAll(".profile-details span");
+
+      fields.forEach(function (field) {
+        var inputField = field.querySelector("input");
+        field.innerHTML = inputField.value;
+      });
+
+      var editButton = document.getElementById("edit-button");
+      var saveButton = document.getElementById("save-button");
+
+      editButton.innerText = "Edit";
+      saveButton.style.display = "none";
+    }
+  </script>
+  <footer>
+    <p>&copy; 2023 Professional Based Learning</p>
+  </footer>
+</body>
+
 </html>
