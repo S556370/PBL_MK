@@ -44,5 +44,15 @@ body {
     font-size: 12px;
   }
   
-  /* Additional styling and customization as per your requirements */
-  
+  /* Media queries for responsive design */
+  @media (max-width: 768px) {
+    .developer {
+      width: 100%; /* Set full width for smaller screens */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .developer-images {
+      justify-content: space-around; /* Adjust spacing for smaller screens */
+    }
+  }
