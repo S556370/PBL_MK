@@ -1,57 +1,125 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>PBL Home</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" type="text/css" href="styles.css">
-<style>
-body {
-  font-family: "Times New Roman", Georgia, Serif;
-  margin: 0;
-  padding-bottom: 50px; /* Set a padding bottom value for the body to accommodate the footer */
-}
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display";
-  letter-spacing: 5px;
-}
-.w3-margin {
-  margin-top: 80px; /* Add margin-top to create space between navbar and blog entry */
-}
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 50px;
-  background-color: #f5f5f5;
-  padding: 10px;
-  text-align: center;
-}
-</style>
+  <title>PBL Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    body {
+      font-family: "Times New Roman", Georgia, Serif;
+      margin: 0;
+      padding-bottom: 50px; /* Set a padding bottom value for the body to accommodate the footer */
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: "Playfair Display";
+      letter-spacing: 2px;
+    }
+
+    .w3-margin {
+      margin-top: 80px; /* Add margin-top to create space between navbar and blog entry */
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      background-color: #f5f5f5;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .developer-images, .developer-title-id {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 10px; /* Increased space between images */
+      margin-bottom: 50px;
+    }
+
+    .developer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 10px;
+      width: 150px; /* Set a fixed width */
+      height: 150px; /* Set a fixed height */
+    }
+
+    .developer img {
+      border-radius: 50%; /* Added border-radius to make the images rounded */
+      width: 100%; /* Make the image fill the container */
+      height: 100%; /* Make the image fill the container */
+      object-fit: cover; /* Ensure the image maintains its aspect ratio and fills the container */
+    }
+
+    .developer-name {
+      margin-top: 5px; /* Margin below the developer name */
+      margin-bottom: 15px;
+      font-size: larger;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-<header>
-  <nav>
-    <div class="logo">
-      <img src="./images/N-Horiz-Full.png" alt="PBL" style="height: 75px; width: 200px;">
-    </div>
-    <span style="font-size: x-large;"><b>Professional Based Learning</b></span>
-    <div class="menu">
-      <a href="homepage.html"><button style="margin-right: 10px;">Home</button></a>
-      <a href="about.html"><button style="margin-right: 10px;">About</button></a>
-      <a href="signup.html"><button style="margin-right: 10px;">SignUp</button></a>
-      <a href="signin.html"><button style="margin-right: 10px;">SignIn</button></a>
-    </div>
-  </nav>
-</header>
-<hr>
-<div id="AboutDiv">
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="./images/N-Horiz-Full.png" alt="PBL" style="height: 75px; width: 200px;">
+      </div>
+      <span style="font-size: x-large;"><b>Professional Based Learning</b></span>
+      <div class="menu">
+        <a href="homepage.html"><button style="margin-right: 10px;">Home</button></a>
+        <a href="about.html"><button style="margin-right: 10px;">About</button></a>
+        <a href="signup.html"><button style="margin-right: 10px;">SignUp</button></a>
+        <a href="signin.html"><button style="margin-right: 10px;">SignIn</button></a>
+      </div>
+    </nav>
+  </header>
+  <hr>
+  <div id="AboutDiv" style="margin: 25px ">
+    <center><img src="./images/northwest-image3.jpg" /></center><br><br>
+    <span style="font-size: large;">
+      Northwest professional based learning (PBL) is one of the CIET project, and which is a platform for project to explore projects. Northwest’s Faculties, students, any authorized users can post and discuss their potential PBL projects on this platform and unauthorized users can only view the public projects available on the platform. The authorized users receive requests for the projects which he/she has posted and can contact them through email or internal message system. After interviewing them, they can decide on the team to work on their project.
+    </span><br><br>
 
-</div>
-<footer>
-  <p>&copy; 2023 Professional Based Learning</p>
-</footer>
+    <section id="developer-section">
+      <span class="developer-title-id"><h2><b>Developers</b></h2></span>
+      <div class="developer-images">
+        <div class="developer">
+          <img src="./images/Shivani_Image.jpg" alt="Developer 1" />
+          <span class="developer-name">Shivani</span>
+        </div>
+        <div class="developer">
+          <img src="./images/Ashok_Murali_Image.jpg" alt="Developer 2" />
+          <span class="developer-name">Ashok Murali</span>
+        </div>
+        <div class="developer">
+          <img src="./images/Murali Krishna Image.jpg" alt="Developer 3" />
+          <span class="developer-name">Murali Krishna</span>
+        </div>
+        <div class="developer">
+          <img src="./images/Nithin Kunal Image.jpg" alt="Developer 4" />
+          <span class="developer-name">Nithin Kunal</span>
+        </div>
+        <div class="developer">
+          <img src="./images/Nikhil_Image.jpg" alt="Developer 5" />
+          <span class="developer-name">Nikhil Varma</span>
+        </div>
+        <div class="developer">
+          <img src="./images/Lakshmi mage.png" alt="Developer 6" />
+          <span class="developer-name">Lakshmi</span>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer>
+    <p>&copy; 2023 Professional Based Learning</p>
+  </footer>
 </body>
 </html>
