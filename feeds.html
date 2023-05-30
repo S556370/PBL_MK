@@ -1,441 +1,596 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>PBL Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="NewPostForm.css" />
 
-<head>
-  <title>W3.CSS Template</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <link rel="stylesheet" type="text/css" href="NewPostForm.css">
+    <style>
+      body {
+        font-family: "Times New Roman", Georgia, Serif;
+      }
 
-  <style>
-    body {
-      font-family: "Times New Roman", Georgia, Serif;
-    }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Playfair Display";
+        letter-spacing: 2px;
+      }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: "Playfair Display";
-      letter-spacing: 2px;
-    }
+      .w3-margin {
+        margin-top: 80px;
+        /* Add margin-top to create space between navbar and blog entry */
+      }
 
-    .w3-margin {
-      margin-top: 80px;
-      /* Add margin-top to create space between navbar and blog entry */
-    }
+      footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background-color: #f5f5f5;
+        padding: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
 
-    footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50px;
-    background-color: #f5f5f5;
-    padding: 10px;
-    text-align: center;
-  }
-  </style>
-</head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img
+            src="./images/N-Horiz-Full.png"
+            alt="PBL"
+            style="height: 75px; width: 200px"
+          />
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Search" />
+        </div>
+        <div class="menu">
+          <button onclick="openModal()">Post your project</button>
+          <button><a href="./profilepage.html">Profile</a></button>
+          <button><a href="./statisticspage.html">Statistics</a></button>
+          <button><a href="./notifications.html">Notifications</a></button>
+          <button><a href="./homepage.html">SignOut</a></button>
+        </div>
+      </nav>
+    </header>
 
-<body>
+    <hr />
 
-
-  <header>
-    <nav>
-      <div class="logo">
-        <img src="./images/N-Horiz-Full.png" alt="PBL" style="height: 75px; width: 200px;">
-      </div>
-      <div class="search-bar">
-        <input type="text" placeholder="Search">
-      </div>
-      <div class="menu">
-        <button onclick="openModal()">Post your project</button>
-        <button><a href="./profilepage.html">Profile</a></button>
-        <button><a href="./statisticspage.html">Statistics</a></button>
-        <button ><a href="./notifications.html">Notifications</a></button>
-        <button ><a href="./homepage.html">SignOut</a></button>
-      </div>
-    </nav>
-  </header>
-
-  <hr>
-
-
-  <div id="form-popup" class="form-popup">
-    <form id="form-container" class="form-container">
-
+    <div id="form-popup" class="form-popup">
+      <form id="form-container" class="form-container">
         <label for="createNewProject-title">
-            <h2>Create a New Project</h2>
+          <h2>Create a New Project</h2>
         </label>
-        <br>
+        <br />
 
-        <label for="project-title"  style="margin-top: 10px;">Project Title:</label>
-        <input type="text" id="project-title" name="project-title" required>
-        <br><br>
+        <label for="project-title" style="margin-top: 10px"
+          >Project Title:</label
+        >
+        <input type="text" id="project-title" name="project-title" required />
+        <br /><br />
 
-        <label for="project description" style="margin-top: 20px;">Project Description:</label><br>
-        <textarea id="project-description" name="project-description" rows="10" cols="50"
-            required></textarea>
-        <br><br>
+        <label for="project description" style="margin-top: 20px"
+          >Project Description:</label
+        ><br />
+        <textarea
+          id="project-description"
+          name="project-description"
+          rows="10"
+          cols="50"
+          required
+        ></textarea>
+        <br /><br />
 
         <label for="attachments">Attachments:</label>
         <input type="text" id="attachments" name="attachments" />
         <button type="button">Attach Files</button>
-        <br><br>
+        <br /><br />
 
         <label>Privacy:</label>
-        <input type="radio" id="private" name="privacy" value="private" checked> <label
-            for="private">Private</label>
-        <input type="radio" id="public" name="privacy" value="public"> <label for="public">Public</label>
-        <br><br>
+        <input
+          type="radio"
+          id="private"
+          name="privacy"
+          value="private"
+          checked
+        />
+        <label for="private">Private</label>
+        <input type="radio" id="public" name="privacy" value="public" />
+        <label for="public">Public</label> <br /><br />
         <button type="submit" id="submit" name="submit">Submit</button>
         <button type="button" id="cancel" name="cancel">cancel</button>
-     </form>
-</div>
-
-<!-- Blog entry 1 -->
-  <div class="w3-card-4 w3-margin w3-white">
-    <!-- <img src="/w3images/woods.jpg" alt="Nature" style="width:100%"> -->
-    <div class="w3-container">
-      <h3><b>Professional Based Learning</b></h3>
-      <h5>PBL which is the professional based learning an online community platform that primarily focused on Project
-        ideas.​ <span class="w3-opacity">April 7, 2014</span></h5>
+      </form>
     </div>
 
-    <div class="w3-container">
-      <div id="projectDescription1" class="project-description" style="display: none;">
-        <p>It is designed to provide a space where Faculty, Students and Users can post and discussed their project
-          ideas, ask questions, share knowledge, and collaborate with each-others.​</p>
+    <!-- Blog entry 1 -->
+    <div class="w3-card-4 w3-margin w3-white">
+      <!-- <img src="/w3images/woods.jpg" alt="Nature" style="width:100%"> -->
+      <div class="w3-container">
+        <h3><b>Professional Based Learning</b></h3>
+        <h5>
+          PBL which is the professional based learning an online community
+          platform that primarily focused on Project ideas.​
+          <span class="w3-opacity">April 7, 2014</span>
+        </h5>
       </div>
-      <div class="w3-row">
-        <div class="w3-col m8 s12">
+
+      <div class="w3-container">
+        <div
+          id="projectDescription1"
+          class="project-description"
+          style="display: none"
+        >
           <p>
-            <button class="w3-button w3-padding-large w3-white w3-border" id="readMoreButton1"
-              onclick="readMore(1)"><b>READ MORE »</b></button>
-            <button class="w3-button w3-padding-large w3-white w3-border"
-              onclick="increaseLikeCount('likeCount1')"><b>Like</b></button>
-            <button class="w3-button w3-padding-large w3-white w3-border"
-              onclick="increasedisLikeCount('dislikeCount1')"><b>Dislike</b></button>
-            <button class="w3-button w3-padding-large w3-white w3-border"
-              onclick="toggleComment('commentContainer1')"><b>Comment</b></button>
-            <button class="w3-button w3-padding-large w3-white w3-border"
-              onclick="displayRequests('requestContainer1')">Project Requests</button>
+            It is designed to provide a space where Faculty, Students and Users
+            can post and discussed their project ideas, ask questions, share
+            knowledge, and collaborate with each-others.​
           </p>
-          <div id="commentContainer1" class="comment-container" style="display: none;">
-            <input type="text" id="commentInput1" placeholder="Add a comment">
-            <button class="w3-button w3-padding-small w3-white w3-border"
-              onclick="addComment('commentInput1', 'commentList1')">Add</button>
-            <ul id="commentList1" class="comment-list"></ul>
+        </div>
+        <div class="w3-row">
+          <div class="w3-col m8 s12">
+            <p>
+              <button
+                class="w3-button w3-padding-large w3-white w3-border"
+                id="readMoreButton1"
+                onclick="readMore(1)"
+              >
+                <b>READ MORE »</b>
+              </button>
+              <button
+                class="w3-button w3-padding-large w3-white w3-border"
+                onclick="increaseLikeCount('likeCount1')"
+              >
+                <b>Like</b>
+              </button>
+              <button
+                class="w3-button w3-padding-large w3-white w3-border"
+                onclick="increasedisLikeCount('dislikeCount1')"
+              >
+                <b>Dislike</b>
+              </button>
+              <button
+                class="w3-button w3-padding-large w3-white w3-border"
+                onclick="toggleComment('commentContainer1')"
+              >
+                <b>Comment</b>
+              </button>
+              <button
+                class="w3-button w3-padding-large w3-white w3-border"
+                onclick="displayRequests('requestContainer1')"
+              >
+                Project Requests
+              </button>
+            </p>
+            <div
+              id="commentContainer1"
+              class="comment-container"
+              style="display: none"
+            >
+              <input
+                type="text"
+                id="commentInput1"
+                placeholder="Add a comment"
+              />
+              <button
+                class="w3-button w3-padding-small w3-white w3-border"
+                onclick="addComment('commentInput1', 'commentList1')"
+              >
+                Add
+              </button>
+              <ul id="commentList1" class="comment-list"></ul>
+            </div>
+            <div
+              id="requestContainer1"
+              class="request-container"
+              style="display: none"
+            >
+              <ul id="requestList1" class="request-list">
+                <li>
+                  Request from user1
+                  <button
+                    class="w3-button w3-padding-small w3-white w3-border"
+                    onclick="acceptRequest('request1')"
+                  >
+                    Accept
+                  </button>
+                  <button
+                    class="w3-button w3-padding-small w3-white w3-border"
+                    onclick="rejectRequest('request1')"
+                  >
+                    Reject
+                  </button>
+                </li>
+                <li>
+                  Request from user2
+                  <button
+                    class="w3-button w3-padding-small w3-white w3-border"
+                    onclick="acceptRequest('request2')"
+                  >
+                    Accept
+                  </button>
+                  <button
+                    class="w3-button w3-padding-small w3-white w3-border"
+                    onclick="rejectRequest('request2')"
+                  >
+                    Reject
+                  </button>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div id="requestContainer1" class="request-container" style="display: none;">
-            <ul id="requestList1" class="request-list">
-              <li>
-                Request from user1
-                <button class="w3-button w3-padding-small w3-white w3-border"
-                  onclick="acceptRequest('request1')">Accept</button>
-                <button class="w3-button w3-padding-small w3-white w3-border"
-                  onclick="rejectRequest('request1')">Reject</button>
-              </li>
-              <li>
-                Request from user2
-                <button class="w3-button w3-padding-small w3-white w3-border"
-                  onclick="acceptRequest('request2')">Accept</button>
-                <button class="w3-button w3-padding-small w3-white w3-border"
-                  onclick="rejectRequest('request2')">Reject</button>
-              </li>
-            </ul>
+          <div class="w3-col m4 w3-hide-small">
+            <p>
+              <span id="dislikeCount1" class="w3-padding-large w3-right"
+                ><b>Dislike Count: </b><span class="w3-tag">0</span></span
+              >
+            </p>
+            <p>
+              <span id="likeCount1" class="w3-padding-large w3-right"
+                ><b>Like Count: </b><span class="w3-tag">0</span></span
+              >
+            </p>
           </div>
         </div>
-        <div class="w3-col m4 w3-hide-small">
-          <p><span id="dislikeCount1" class="w3-padding-large w3-right"><b>Dislike Count: </b><span
-                class="w3-tag">0</span></span></p>
-          <p><span id="likeCount1" class="w3-padding-large w3-right"><b>Like Count: </b><span
-                class="w3-tag">0</span></span></p>
+        <div
+          id="projectDescription1"
+          class="project-description"
+          style="display: none"
+        >
+          <p>Project description goes here...</p>
         </div>
-      </div>
-      <div id="projectDescription1" class="project-description" style="display: none;">
-        <p>Project description goes here...</p>
       </div>
     </div>
-  </div>
 
-  <hr>
+    <hr />
 
-  <!-- Blog entry 2 -->
-  <div class="w3-card-4 w3-margin w3-white">
-    <!-- <img src="/w3images/woods.jpg" alt="Nature" style="width:100%"> -->
-    <div class="w3-container">
-      <h3><b>TITLE HEADING</b></h3>
-      <h5>Title description, <span class="w3-opacity">April 7, 2014</span></h5>
-    </div>
-
-    <div class="w3-container">
-      <div id="projectDescription2" class="project-description" style="display: none;">
-        <p>Project2 description goes here...</p>
-      </div>
-      <div class="w3-row">
-        <div class="w3-col m8 s12">
-          <p>
-            <button class="w3-button w3-padding-large w3-white w3-border" id="readMoreButton2"
-              onclick="readMore(2)"><b>READ MORE »</b></button>
-            <button class="w3-button w3-padding-large w3-white w3-border"
-              onclick="increaseLikeCount('likeCount2')"><b>Like</b></button>
-            <button class="w3-button w3-padding-large w3-white w3-border"
-              onclick="increasedisLikeCount('dislikeCount2')"><b>Dislike</b></button>
-            <button class="w3-button w3-padding-large w3-white w3-border"
-              onclick="toggleComment('commentContainer2')"><b>Comment</b></button>
-            <button class="w3-button w3-padding-large w3-white w3-border"
-              onclick="displayRequests('requestContainer2')">Project Requests</button>
-          </p>
-
-          <div id="commentContainer2" class="comment-container" style="display: none;">
-            <input type="text" id="commentInput2" placeholder="Add a comment">
-            <button class="w3-button w3-padding-small w3-white w3-border"
-              onclick="addComment('commentInput2', 'commentList2')">Add</button>
-            <ul id="commentList2" class="comment-list"></ul>
-          </div>
-          <div id="requestContainer2" class="request-container" style="display: none;">
-            <ul id="requestList2" class="request-list">
-              <li>
-                Request from user1
-                <button class="w3-button w3-padding-small w3-white w3-border"
-                  onclick="acceptRequest('request1')">Accept</button>
-                <button class="w3-button w3-padding-small w3-white w3-border"
-                  onclick="rejectRequest('request1')">Reject</button>
-              </li>
-              <li>
-                Request from user2
-                <button class="w3-button w3-padding-small w3-white w3-border"
-                  onclick="acceptRequest('request2')">Accept</button>
-                <button class="w3-button w3-padding-small w3-white w3-border"
-                  onclick="rejectRequest('request2')">Reject</button>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="w3-col m4 w3-hide-small">
-          <p><span id="dislikeCount2" class="w3-padding-large w3-right"><b>Dislike Count: </b><span
-                class="w3-tag">0</span></span></p>
-          <p><span id="likeCount2" class="w3-padding-large w3-right"><b>Like Count: </b><span
-                class="w3-tag">0</span></span></p>
-        </div>
+    <!-- Blog entry 2 -->
+    <div class="w3-card-4 w3-margin w3-white">
+      <!-- <img src="/w3images/woods.jpg" alt="Nature" style="width:100%"> -->
+      <div class="w3-container">
+        <h3><b>TITLE HEADING</b></h3>
+        <h5>
+          Title description, <span class="w3-opacity">April 7, 2014</span>
+        </h5>
       </div>
 
+      <div class="w3-container">
+        <div
+          id="projectDescription2"
+          class="project-description"
+          style="display: none"
+        >
+          <p>Project2 description goes here...</p>
+        </div>
+        <div class="w3-row">
+          <div class="w3-col m8 s12">
+            <p>
+              <button
+                class="w3-button w3-padding-large w3-white w3-border"
+                id="readMoreButton2"
+                onclick="readMore(2)"
+              >
+                <b>READ MORE »</b>
+              </button>
+              <button
+                class="w3-button w3-padding-large w3-white w3-border"
+                onclick="increaseLikeCount('likeCount2')"
+              >
+                <b>Like</b>
+              </button>
+              <button
+                class="w3-button w3-padding-large w3-white w3-border"
+                onclick="increasedisLikeCount('dislikeCount2')"
+              >
+                <b>Dislike</b>
+              </button>
+              <button
+                class="w3-button w3-padding-large w3-white w3-border"
+                onclick="toggleComment('commentContainer2')"
+              >
+                <b>Comment</b>
+              </button>
+              <button
+                class="w3-button w3-padding-large w3-white w3-border"
+                onclick="displayRequests('requestContainer2')"
+              >
+                Project Requests
+              </button>
+            </p>
+
+            <div
+              id="commentContainer2"
+              class="comment-container"
+              style="display: none"
+            >
+              <input
+                type="text"
+                id="commentInput2"
+                placeholder="Add a comment"
+              />
+              <button
+                class="w3-button w3-padding-small w3-white w3-border"
+                onclick="addComment('commentInput2', 'commentList2')"
+              >
+                Add
+              </button>
+              <ul id="commentList2" class="comment-list"></ul>
+            </div>
+            <div
+              id="requestContainer2"
+              class="request-container"
+              style="display: none"
+            >
+              <ul id="requestList2" class="request-list">
+                <li>
+                  Request from user1
+                  <button
+                    class="w3-button w3-padding-small w3-white w3-border"
+                    onclick="acceptRequest('request1')"
+                  >
+                    Accept
+                  </button>
+                  <button
+                    class="w3-button w3-padding-small w3-white w3-border"
+                    onclick="rejectRequest('request1')"
+                  >
+                    Reject
+                  </button>
+                </li>
+                <li>
+                  Request from user2
+                  <button
+                    class="w3-button w3-padding-small w3-white w3-border"
+                    onclick="acceptRequest('request2')"
+                  >
+                    Accept
+                  </button>
+                  <button
+                    class="w3-button w3-padding-small w3-white w3-border"
+                    onclick="rejectRequest('request2')"
+                  >
+                    Reject
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="w3-col m4 w3-hide-small">
+            <p>
+              <span id="dislikeCount2" class="w3-padding-large w3-right"
+                ><b>Dislike Count: </b><span class="w3-tag">0</span></span
+              >
+            </p>
+            <p>
+              <span id="likeCount2" class="w3-padding-large w3-right"
+                ><b>Like Count: </b><span class="w3-tag">0</span></span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <script>
+    <script>
+      var projectDescriptionVisible = false;
 
-    var projectDescriptionVisible = false;
+      function readMore(projectId) {
+        var projectDescription = document.getElementById(
+          "projectDescription" + projectId
+        );
+        var readMoreButton = document.getElementById(
+          "readMoreButton" + projectId
+        );
 
-    function readMore(projectId) {
-      var projectDescription = document.getElementById("projectDescription" + projectId);
-      var readMoreButton = document.getElementById("readMoreButton" + projectId);
-
-      if (projectDescription.style.display === "none") {
-        projectDescription.style.display = "block";
-        readMoreButton.innerHTML = "<b>READ LESS «</b>";
-      } else {
-        projectDescription.style.display = "none";
-        readMoreButton.innerHTML = "<b>READ MORE »</b>";
+        if (projectDescription.style.display === "none") {
+          projectDescription.style.display = "block";
+          readMoreButton.innerHTML = "<b>READ LESS «</b>";
+        } else {
+          projectDescription.style.display = "none";
+          readMoreButton.innerHTML = "<b>READ MORE »</b>";
+        }
       }
-    }
 
+      var likeCount1 = 0;
+      var likeCount2 = 0;
 
-
-
-    var likeCount1 = 0;
-    var likeCount2 = 0;
-
-    function increaseLikeCount(likeCountId) {
-      if (likeCountId === 'likeCount1') {
-        likeCount1++;
-        document.getElementById(likeCountId).innerHTML = "<b>Like Count: </b>" + '<span class="w3-tag">' + likeCount1 + '</span>';
-      } else if (likeCountId === 'likeCount2') {
-        likeCount2++;
-        document.getElementById(likeCountId).innerHTML = "<b>Like Count: </b>" + '<span class="w3-tag">' + likeCount2 + '</span>';
+      function increaseLikeCount(likeCountId) {
+        if (likeCountId === "likeCount1") {
+          likeCount1++;
+          document.getElementById(likeCountId).innerHTML =
+            "<b>Like Count: </b>" +
+            '<span class="w3-tag">' +
+            likeCount1 +
+            "</span>";
+        } else if (likeCountId === "likeCount2") {
+          likeCount2++;
+          document.getElementById(likeCountId).innerHTML =
+            "<b>Like Count: </b>" +
+            '<span class="w3-tag">' +
+            likeCount2 +
+            "</span>";
+        }
       }
-    }
-    var dislikeCount1 = 0;
-    var dislikeCount2 = 0;
+      var dislikeCount1 = 0;
+      var dislikeCount2 = 0;
 
-    function increasedisLikeCount(dislikeCountId) {
-      if (dislikeCountId === 'dislikeCount1') {
-        dislikeCount1++;
-        document.getElementById(dislikeCountId).innerHTML = "<b>Dislike Count: </b>" + '<span class="w3-tag">' + dislikeCount1 + '</span>';
-      } else if (dislikeCountId === 'dislikeCount2') {
-        dislikeCount2++;
-        document.getElementById(dislikeCountId).innerHTML = "<b>Dislike Count: </b>" + '<span class="w3-tag">' + dislikeCount2 + '</span>';
+      function increasedisLikeCount(dislikeCountId) {
+        if (dislikeCountId === "dislikeCount1") {
+          dislikeCount1++;
+          document.getElementById(dislikeCountId).innerHTML =
+            "<b>Dislike Count: </b>" +
+            '<span class="w3-tag">' +
+            dislikeCount1 +
+            "</span>";
+        } else if (dislikeCountId === "dislikeCount2") {
+          dislikeCount2++;
+          document.getElementById(dislikeCountId).innerHTML =
+            "<b>Dislike Count: </b>" +
+            '<span class="w3-tag">' +
+            dislikeCount2 +
+            "</span>";
+        }
       }
-    }
 
-    function toggleComment(commentContainerId) {
-      var commentContainer = document.getElementById(commentContainerId);
-      if (commentContainer.style.display === "none") {
-        commentContainer.style.display = "block";
-      } else {
-        commentContainer.style.display = "none";
+      function toggleComment(commentContainerId) {
+        var commentContainer = document.getElementById(commentContainerId);
+        if (commentContainer.style.display === "none") {
+          commentContainer.style.display = "block";
+        } else {
+          commentContainer.style.display = "none";
+        }
       }
-    }
 
-    function addComment(commentInputId, commentListId) {
-      var commentInput = document.getElementById(commentInputId);
-      var commentList = document.getElementById(commentListId);
-      var commentText = commentInput.value;
-      var commentItem = document.createElement("li");
-      commentItem.appendChild(document.createTextNode(commentText));
-      commentList.appendChild(commentItem);
-      commentInput.value = "";
-    }
-
-    function displayRequests(requestContainerId) {
-      var requestContainer = document.getElementById(requestContainerId);
-      if (requestContainer.style.display === "none") {
-        requestContainer.style.display = "block";
-      } else {
-        requestContainer.style.display = "none";
+      function addComment(commentInputId, commentListId) {
+        var commentInput = document.getElementById(commentInputId);
+        var commentList = document.getElementById(commentListId);
+        var commentText = commentInput.value;
+        var commentItem = document.createElement("li");
+        commentItem.appendChild(document.createTextNode(commentText));
+        commentList.appendChild(commentItem);
+        commentInput.value = "";
       }
-    }
 
-    function acceptRequest(requestId) {
-      alert("Accepted request: " + requestId);
-    }
+      function displayRequests(requestContainerId) {
+        var requestContainer = document.getElementById(requestContainerId);
+        if (requestContainer.style.display === "none") {
+          requestContainer.style.display = "block";
+        } else {
+          requestContainer.style.display = "none";
+        }
+      }
 
-    function rejectRequest(requestId) {
-      alert("Rejected request: " + requestId);
-    }
+      function acceptRequest(requestId) {
+        alert("Accepted request: " + requestId);
+      }
 
+      function rejectRequest(requestId) {
+        alert("Rejected request: " + requestId);
+      }
 
-    // Form Script
+      // Form Script
 
-    function openModal() {
+      function openModal() {
+        // var formpopup = document.createElement("div");
+        // formpopup.setAttribute("id", "form-popup");
+        // formpopup.setAttribute("class", "form-popup");
 
-      // var formpopup = document.createElement("div");
-      // formpopup.setAttribute("id", "form-popup");
-      // formpopup.setAttribute("class", "form-popup");
+        // // Create the form fields
+        // var projectTitleLabel = document.createElement("label");
+        // projectTitleLabel.setAttribute("for", "project-title");
+        // projectTitleLabel.textContent = "Project Title:";
+        // var projectTitleInput = document.createElement("input");
+        // projectTitleInput.setAttribute("type", "text");
+        // projectTitleInput.setAttribute("id", "project-title");
+        // projectTitleInput.setAttribute("name", "project-title");
+        // projectTitleInput.setAttribute("required", "");
 
-      // // Create the form fields
-      // var projectTitleLabel = document.createElement("label");
-      // projectTitleLabel.setAttribute("for", "project-title");
-      // projectTitleLabel.textContent = "Project Title:";
-      // var projectTitleInput = document.createElement("input");
-      // projectTitleInput.setAttribute("type", "text");
-      // projectTitleInput.setAttribute("id", "project-title");
-      // projectTitleInput.setAttribute("name", "project-title");
-      // projectTitleInput.setAttribute("required", "");
+        // var projectDescriptionLabel = document.createElement("label");
+        // projectDescriptionLabel.setAttribute("for", "project-description");
+        // projectDescriptionLabel.textContent = "Project Description:";
+        // var projectDescriptionTextarea = document.createElement("textarea");
+        // projectDescriptionTextarea.setAttribute("id", "project-description");
+        // projectDescriptionTextarea.setAttribute("name", "project-description");
+        // projectDescriptionTextarea.setAttribute("required", "");
 
-      // var projectDescriptionLabel = document.createElement("label");
-      // projectDescriptionLabel.setAttribute("for", "project-description");
-      // projectDescriptionLabel.textContent = "Project Description:";
-      // var projectDescriptionTextarea = document.createElement("textarea");
-      // projectDescriptionTextarea.setAttribute("id", "project-description");
-      // projectDescriptionTextarea.setAttribute("name", "project-description");
-      // projectDescriptionTextarea.setAttribute("required", "");
+        // var attachmentsLabel = document.createElement("label");
+        // attachmentsLabel.setAttribute("for", "attachments");
+        // attachmentsLabel.textContent = "Attachments:";
+        // var attachmentsInput = document.createElement("input");
+        // attachmentsInput.setAttribute("type", "text");
+        // attachmentsInput.setAttribute("id", "attachments");
+        // attachmentsInput.setAttribute("name", "attachments");
+        // var attachFilesButton = document.createElement("button");
+        // attachFilesButton.setAttribute("type", "button");
+        // attachFilesButton.textContent = "Attach Files";
+        // attachFilesButton.addEventListener("click", attachFiles);
 
-      // var attachmentsLabel = document.createElement("label");
-      // attachmentsLabel.setAttribute("for", "attachments");
-      // attachmentsLabel.textContent = "Attachments:";
-      // var attachmentsInput = document.createElement("input");
-      // attachmentsInput.setAttribute("type", "text");
-      // attachmentsInput.setAttribute("id", "attachments");
-      // attachmentsInput.setAttribute("name", "attachments");
-      // var attachFilesButton = document.createElement("button");
-      // attachFilesButton.setAttribute("type", "button");
-      // attachFilesButton.textContent = "Attach Files";
-      // attachFilesButton.addEventListener("click", attachFiles);
+        // var privacyLabel = document.createElement("label");
+        // privacyLabel.textContent = "Privacy:";
+        // var privateInput = document.createElement("input");
+        // privateInput.setAttribute("type", "radio");
+        // privateInput.setAttribute("id", "private");
+        // privateInput.setAttribute("name", "privacy");
+        // privateInput.setAttribute("value", "private");
+        // privateInput.setAttribute("checked", "");
+        // var privateLabel = document.createElement("label");
+        // privateLabel.setAttribute("for", "private");
+        // privateLabel.textContent = "Private";
 
-      // var privacyLabel = document.createElement("label");
-      // privacyLabel.textContent = "Privacy:";
-      // var privateInput = document.createElement("input");
-      // privateInput.setAttribute("type", "radio");
-      // privateInput.setAttribute("id", "private");
-      // privateInput.setAttribute("name", "privacy");
-      // privateInput.setAttribute("value", "private");
-      // privateInput.setAttribute("checked", "");
-      // var privateLabel = document.createElement("label");
-      // privateLabel.setAttribute("for", "private");
-      // privateLabel.textContent = "Private";
+        // var publicInput = document.createElement("input");
+        // publicInput.setAttribute("type", "radio");
+        // publicInput.setAttribute("id", "public");
+        // publicInput.setAttribute("name", "privacy");
+        // publicInput.setAttribute("value", "public");
+        // var publicLabel = document.createElement("label");
+        // publicLabel.setAttribute("for", "public");
+        // publicLabel.textContent = "Public";
 
-      // var publicInput = document.createElement("input");
-      // publicInput.setAttribute("type", "radio");
-      // publicInput.setAttribute("id", "public");
-      // publicInput.setAttribute("name", "privacy");
-      // publicInput.setAttribute("value", "public");
-      // var publicLabel = document.createElement("label");
-      // publicLabel.setAttribute("for", "public");
-      // publicLabel.textContent = "Public";
+        // var privacyContainer = document.createElement("div");
+        // privacyContainer.appendChild(privateInput);
+        // privacyContainer.appendChild(privateLabel);
+        // privacyContainer.appendChild(publicInput);
+        // privacyContainer.appendChild(publicLabel);
 
-      // var privacyContainer = document.createElement("div");
-      // privacyContainer.appendChild(privateInput);
-      // privacyContainer.appendChild(privateLabel);
-      // privacyContainer.appendChild(publicInput);
-      // privacyContainer.appendChild(publicLabel);
+        // var submitButton = document.createElement("button");
+        // submitButton.setAttribute("type", "submit");
+        // submitButton.setAttribute("id", "submit");
+        // submitButton.setAttribute("name", "submit");
+        // submitButton.textContent = "Submit";
 
-      // var submitButton = document.createElement("button");
-      // submitButton.setAttribute("type", "submit");
-      // submitButton.setAttribute("id", "submit");
-      // submitButton.setAttribute("name", "submit");
-      // submitButton.textContent = "Submit";
+        // var cancelButton = document.createElement("button");
+        // cancelButton.setAttribute("type", "button");
+        // cancelButton.setAttribute("id", "cancel");
+        // cancelButton.setAttribute("name", "cancel");
+        // cancelButton.textContent = "Cancel";
 
-      // var cancelButton = document.createElement("button");
-      // cancelButton.setAttribute("type", "button");
-      // cancelButton.setAttribute("id", "cancel");
-      // cancelButton.setAttribute("name", "cancel");
-      // cancelButton.textContent = "Cancel";
+        // var form = document.createElement("form");
+        // form.setAttribute("id", "form-container");
+        // form.setAttribute("class", "form-container");
 
-      // var form = document.createElement("form");
-      // form.setAttribute("id", "form-container");
-      // form.setAttribute("class", "form-container");
+        // form.appendChild(projectTitleLabel);
+        // form.appendChild(projectTitleInput);
+        // form.appendChild(projectDescriptionLabel);
+        // form.appendChild(projectDescriptionTextarea);
+        // form.appendChild(attachmentsLabel);
+        // form.appendChild(attachmentsInput);
+        // form.appendChild(attachFilesButton);
+        // form.appendChild(privacyLabel);
+        // form.appendChild(privacyContainer);
+        // form.appendChild(submitButton);
+        // form.appendChild(cancelButton);
 
-      // form.appendChild(projectTitleLabel);
-      // form.appendChild(projectTitleInput);
-      // form.appendChild(projectDescriptionLabel);
-      // form.appendChild(projectDescriptionTextarea);
-      // form.appendChild(attachmentsLabel);
-      // form.appendChild(attachmentsInput);
-      // form.appendChild(attachFilesButton);
-      // form.appendChild(privacyLabel);
-      // form.appendChild(privacyContainer);
-      // form.appendChild(submitButton);
-      // form.appendChild(cancelButton);
+        // // Append the form to the form container
+        // formpopup.appendChild(form);
 
-      // // Append the form to the form container
-      // formpopup.appendChild(form);
+        // Append the form container to the document body or any desired parent element
+        // document.body.appendChild(formpopup);
 
+        document.getElementById("form-popup").style.display = "block";
+        var cancelButton = document.getElementById("cancel");
+        cancelButton.addEventListener("click", cancelForm);
+      }
 
-      // Append the form container to the document body or any desired parent element
-      // document.body.appendChild(formpopup);
+      function attachFiles() {
+        console.log("Attach files button clicked");
+      }
 
-
-
-
-      document.getElementById("form-popup").style.display = "block";
-      var cancelButton = document.getElementById("cancel");
-      cancelButton.addEventListener("click",cancelForm);
-
-    }
-    
-
-    function attachFiles() {
-      console.log("Attach files button clicked");
-    }
-
-    function cancelForm() {
-      console.log("Form canceled");
-      document.getElementById("form-popup").style.display = "none";
-    }
-
-
-
-  </script>
-  <footer>
-    <p>&copy; 2023 Professional Based Learning</p>
-  </footer>
-</body>
-
+      function cancelForm() {
+        console.log("Form canceled");
+        document.getElementById("form-popup").style.display = "none";
+      }
+    </script>
+    <footer>
+      <p>&copy; 2023 Professional Based Learning</p>
+    </footer>
+  </body>
 </html>
