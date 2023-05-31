@@ -1,351 +1,199 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>PBL Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-    <link rel="stylesheet" type="text/css" href="NewPostForm.css" />
 
-    <style>
-      body {
-        font-family: "Times New Roman", Georgia, Serif;
-      }
+<head>
+  <title>PBL Home</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <link rel="stylesheet" type="text/css" href="NewPostForm.css" />
 
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Playfair Display";
-        letter-spacing: 2px;
-      }
+  <style>
+    body {
+      font-family: "Times New Roman", Georgia, Serif;
+    }
 
-      .w3-margin {
-        margin-top: 80px;
-        /* Add margin-top to create space between navbar and blog entry */
-      }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Playfair Display";
+      letter-spacing: 2px;
+    }
 
-      footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 50px;
-        background-color: #f5f5f5;
-        padding: 10px;
-        text-align: center;
-      }
-    </style>
-  </head>
+    .w3-margin {
+      margin-top: 80px;
+      /* Add margin-top to create space between navbar and blog entry */
+    }
 
-  <body>
-    <header>
-      <nav>
-        <div class="logo">
-          <img
-            src="./images/N-Horiz-Full.png"
-            alt="PBL"
-            style="height: 75px; width: 200px"
-          />
-        </div>
-        <div class="search-bar">
-          <input type="text" placeholder="Search" />
-        </div>
-        <div class="menu" id="menu-if-not-admin">
-          <!-- <button onclick="openModal()">Post your project</button> -->
-          <button><a href="./feeds.html">Feeds</a></button>
-          <button><a href="./profilepage.html">Profile</a></button>
-          <button><a href="./statisticspage.html">Statistics</a></button>
-          <!-- <button><a href="./notifications.html">Notifications</a></button> -->
-          <button><a href="./homepage.html">SignOut</a></button>
-        </div>
-        <div class="menu" id="menu-if-admin">
-          <!-- <button onclick="openModal()">Post your project</button> -->
-          <button><a href="./feeds.html?role=admin">Feeds</a></button>
-          <button id="adminpages_projectapproval"><a id="adminpages_projectapproval_link" href="./projectAproval.html?role=admin">Project Approvals</a></button>
-          <button><a href="./profilepage.html?role=admin">Profile</a></button>
-          <button><a href="./statisticspage.html?role=admin">Statistics</a></button>
-          <!-- <button><a href="./notifications.html?role=admin">Notifications</a></button> -->
-          <button><a href="./homepage.html">SignOut</a></button>
-        </div>
-      </nav>
-    </header>
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      background-color: #f5f5f5;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
 
-    <hr />
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="./images/N-Horiz-Full.png" alt="PBL" style="height: 75px; width: 200px" />
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search" />
+      </div>
+      <div class="menu" id="menu-if-not-admin">
+        <!-- <button onclick="openModal()">Post your project</button> -->
+        <button><a href="./feeds.html">Feeds</a></button>
+        <button><a href="./profilepage.html">Profile</a></button>
+        <button><a href="./statisticspage.html">Statistics</a></button>
+        <!-- <button><a href="./notifications.html">Notifications</a></button> -->
+        <button><a href="./homepage.html">SignOut</a></button>
+      </div>
+      <div class="menu" id="menu-if-admin">
+        <!-- <button onclick="openModal()">Post your project</button> -->
+        <button><a href="./feeds.html?role=admin">Feeds</a></button>
+        <button id="adminpages_projectapproval"><a id="adminpages_projectapproval_link"
+            href="./projectAproval.html?role=admin">Project Approvals</a></button>
+        <button><a href="./profilepage.html?role=admin">Profile</a></button>
+        <button><a href="./statisticspage.html?role=admin">Statistics</a></button>
+        <!-- <button><a href="./notifications.html?role=admin">Notifications</a></button> -->
+        <button><a href="./homepage.html">SignOut</a></button>
+      </div>
+    </nav>
+  </header>
 
+  <hr />
+
+  <div id="user-if-not-admin">
     <!-- Blog entry 1 -->
     <div class="w3-card-4 w3-margin w3-white">
       <!-- <img src="/w3images/woods.jpg" alt="Nature" style="width:100%"> -->
       <div class="w3-container">
-        <h3><b>Professional Based Learning</b></h3>
+        <h3><b>Notification-1</b></h3>
         <h5>
-          PBL which is the professional based learning an online community
-          platform that primarily focused on Project ideas.​
-          <span class="w3-opacity">April 7, 2014</span>
+          User-A, liked your project-1​. <span class="w3-opacity">May 31, 2023</span>
         </h5>
       </div>
-
+    </div>
+    <hr />
+    <!-- Blog entry 2 -->
+    <div class="w3-card-4 w3-margin w3-white">
+      <!-- <img src="/w3images/woods.jpg" alt="Nature" style="width:100%"> -->
       <div class="w3-container">
-        <div
-          id="projectDescription1"
-          class="project-description"
-          style="display: none"
-        >
-          <p>
-            It is designed to provide a space where Faculty, Students and Users
-            can post and discussed their project ideas, ask questions, share
-            knowledge, and collaborate with each-others.​
-          </p>
-        </div>
-        <div class="w3-row">
-          <div class="w3-col m8 s12">
-            <p>
-              <button
-                class="w3-button w3-padding-large w3-white w3-border"
-                id="readMoreButton1"
-                onclick="readMore(1)"
-              >
-                <b>READ MORE »</b>
-              </button>
-              <button
-                class="w3-button w3-padding-large w3-white w3-border"
-                onclick="increaseLikeCount('likeCount1')"
-              >
-                <b>Interested</b>
-              </button>
-              <button
-                class="w3-button w3-padding-large w3-white w3-border"
-                onclick="increasedisLikeCount('dislikeCount1')"
-              >
-                <b>Not Interested</b>
-              </button>
-              <button
-                class="w3-button w3-padding-large w3-white w3-border"
-                onclick="toggleComment('commentContainer1')"
-              >
-                <b>Comment</b>
-              </button>
-              <button
-                class="w3-button w3-padding-large w3-white w3-border"
-                onclick="displayRequests('requestContainer1')"
-              >
-                Project Requests
-              </button>
-            </p>
-            <div
-              id="commentContainer1"
-              class="comment-container"
-              style="display: none"
-            >
-              <input
-                type="text"
-                id="commentInput1"
-                placeholder="Add a comment"
-              />
-              <button
-                class="w3-button w3-padding-small w3-white w3-border"
-                onclick="addComment('commentInput1', 'commentList1')"
-              >
-                Add
-              </button>
-              <ul id="commentList1" class="comment-list"></ul>
-            </div>
-            <div
-              id="requestContainer1"
-              class="request-container"
-              style="display: none"
-            >
-              <ul id="requestList1" class="request-list">
-                <li>
-                  Request from user1
-                  <button
-                    class="w3-button w3-padding-small w3-white w3-border"
-                    onclick="acceptRequest('request1')"
-                  >
-                    Accept
-                  </button>
-                  <button
-                    class="w3-button w3-padding-small w3-white w3-border"
-                    onclick="rejectRequest('request1')"
-                  >
-                    Reject
-                  </button>
-                </li>
-                <li>
-                  Request from user2
-                  <button
-                    class="w3-button w3-padding-small w3-white w3-border"
-                    onclick="acceptRequest('request2')"
-                  >
-                    Accept
-                  </button>
-                  <button
-                    class="w3-button w3-padding-small w3-white w3-border"
-                    onclick="rejectRequest('request2')"
-                  >
-                    Reject
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="w3-col m4 w3-hide-small">
-            <p>
-              <span id="dislikeCount1" class="w3-padding-large w3-right"
-                ><b>Dislike Count: </b><span class="w3-tag">0</span></span
-              >
-            </p>
-            <p>
-              <span id="likeCount1" class="w3-padding-large w3-right"
-                ><b>Like Count: </b><span class="w3-tag">0</span></span
-              >
-            </p>
-          </div>
-        </div>
-        <div
-          id="projectDescription1"
-          class="project-description"
-          style="display: none"
-        >
-          <p>Project description goes here...</p>
-        </div>
+        <h3><b>Notification-2</b></h3>
+        <h5>
+          User-B, Requested to join your project-1​. <span class="w3-opacity">May 31, 2023</span>
+        </h5>
       </div>
     </div>
-
     <hr />
+    <!-- Blog entry 3 -->
+    <div class="w3-card-4 w3-margin w3-white">
+      <!-- <img src="/w3images/woods.jpg" alt="Nature" style="width:100%"> -->
+      <div class="w3-container">
+        <h3><b>Notification-3</b></h3>
+        <h5>
+          User-B, Requested to join your project-2​. <span class="w3-opacity">May 31, 2023</span>
+        </h5>
+      </div>
+    </div>
+    <hr />
+    <!-- Blog entry 4 -->
+    <div class="w3-card-4 w3-margin w3-white">
+      <!-- <img src="/w3images/woods.jpg" alt="Nature" style="width:100%"> -->
+      <div class="w3-container">
+        <h3><b>Notification-4</b></h3>
+        <h5>
+          User-D, Commented on your project-3. <span class="w3-opacity">May 31, 2023</span>
+        </h5>
+      </div>
+    </div>
+    <hr />
+    <!-- Blog entry 4 -->
+    <div class="w3-card-4 w3-margin w3-white">
+      <!-- <img src="/w3images/woods.jpg" alt="Nature" style="width:100%"> -->
+      <div class="w3-container">
+        <h3><b>Notification-5</b></h3>
+        <h5>
+          User-E, Flagged User-G on your project-1​. <span class="w3-opacity">May 31, 2023</span>
+        </h5>
+      </div>
+    </div>
+    <hr />
+  </div>
+  <div id="user-if-admin">
+    <!-- Blog entry 1 -->
+    <div class="w3-card-4 w3-margin w3-white">
+      <!-- <img src="/w3images/woods.jpg" alt="Nature" style="width:100%"> -->
+      <div class="w3-container">
+        <h3><b>Notification-1</b></h3>
+        <h5>
+          User-A's, public project-1 got approved​. <span class="w3-opacity">May 31, 2023</span>
+        </h5>
+      </div>
+    </div>
+    <hr />
+    <!-- Blog entry 2 -->
+    <div class="w3-card-4 w3-margin w3-white">
+      <!-- <img src="/w3images/woods.jpg" alt="Nature" style="width:100%"> -->
+      <div class="w3-container">
+        <h3><b>Notification-2</b></h3>
+        <h5>
+          User-B's, Private Project-2 got Rejected and asked to follow guidelines​. <span class="w3-opacity">May 31,
+            2023</span>
+        </h5>
+      </div>
+    </div>
+    <hr />
+    <!-- Blog entry 3 -->
+    <div class="w3-card-4 w3-margin w3-white">
+      <!-- <img src="/w3images/woods.jpg" alt="Nature" style="width:100%"> -->
+      <div class="w3-container">
+        <h3><b>Notification-3</b></h3>
+        <h5>
+          User-C's, public project-3 got approved​. <span class="w3-opacity">May 31, 2023</span>
+        </h5>
+      </div>
+    </div>
+    <hr />
+  </div>
 
-    <script>
-      var projectDescriptionVisible = false;
 
-      function readMore(projectId) {
-        var projectDescription = document.getElementById(
-          "projectDescription" + projectId
-        );
-        var readMoreButton = document.getElementById(
-          "readMoreButton" + projectId
-        );
+  <script>
 
-        if (projectDescription.style.display === "none") {
-          projectDescription.style.display = "block";
-          readMoreButton.innerHTML = "<b>READ LESS «</b>";
-        } else {
-          projectDescription.style.display = "none";
-          readMoreButton.innerHTML = "<b>READ MORE »</b>";
-        }
-      }
+    // Form Script
 
-      var likeCount1 = 0;
-      var likeCount2 = 0;
-
-      function increaseLikeCount(likeCountId) {
-        if (likeCountId === "likeCount1") {
-          likeCount1++;
-          document.getElementById(likeCountId).innerHTML =
-            "<b>Like Count: </b>" +
-            '<span class="w3-tag">' +
-            likeCount1 +
-            "</span>";
-        } else if (likeCountId === "likeCount2") {
-          likeCount2++;
-          document.getElementById(likeCountId).innerHTML =
-            "<b>Like Count: </b>" +
-            '<span class="w3-tag">' +
-            likeCount2 +
-            "</span>";
-        }
-      }
-      var dislikeCount1 = 0;
-      var dislikeCount2 = 0;
-
-      function increasedisLikeCount(dislikeCountId) {
-        if (dislikeCountId === "dislikeCount1") {
-          dislikeCount1++;
-          document.getElementById(dislikeCountId).innerHTML =
-            "<b>Dislike Count: </b>" +
-            '<span class="w3-tag">' +
-            dislikeCount1 +
-            "</span>";
-        } else if (dislikeCountId === "dislikeCount2") {
-          dislikeCount2++;
-          document.getElementById(dislikeCountId).innerHTML =
-            "<b>Dislike Count: </b>" +
-            '<span class="w3-tag">' +
-            dislikeCount2 +
-            "</span>";
-        }
-      }
-
-      function toggleComment(commentContainerId) {
-        var commentContainer = document.getElementById(commentContainerId);
-        if (commentContainer.style.display === "none") {
-          commentContainer.style.display = "block";
-        } else {
-          commentContainer.style.display = "none";
-        }
-      }
-
-      function addComment(commentInputId, commentListId) {
-        var commentInput = document.getElementById(commentInputId);
-        var commentList = document.getElementById(commentListId);
-        var commentText = commentInput.value;
-        var commentItem = document.createElement("li");
-        commentItem.appendChild(document.createTextNode(commentText));
-        commentList.appendChild(commentItem);
-        commentInput.value = "";
-      }
-
-      function displayRequests(requestContainerId) {
-        var requestContainer = document.getElementById(requestContainerId);
-        if (requestContainer.style.display === "none") {
-          requestContainer.style.display = "block";
-        } else {
-          requestContainer.style.display = "none";
-        }
-      }
-
-      function acceptRequest(requestId) {
-        alert("Accepted request: " + requestId);
-      }
-
-      function rejectRequest(requestId) {
-        alert("Rejected request: " + requestId);
-      }
-
-      // Form Script
-
-      function openModal() {
-        
-        document.getElementById("form-popup").style.display = "block";
-        var cancelButton = document.getElementById("cancel");
-        cancelButton.addEventListener("click", cancelForm);
-      }
-
-      function attachFiles() {
-        console.log("Attach files button clicked");
-      }
-
-      function cancelForm() {
-        console.log("Form canceled");
-        document.getElementById("form-popup").style.display = "none";
-      }
     var url_string = window.location.href;
     var url = new URL(url_string);
     var role = url.searchParams.get("role");
     if (role == "admin") {
       document.getElementById("menu-if-not-admin").style.display = "none";
       document.getElementById("menu-if-admin").style.display = "block";
+      document.getElementById("user-if-not-admin").style.display = "none";
+      document.getElementById("user-if-admin").style.display = "block";
+
       // document.getElementById("adminpages_projectapproval_link").setAttribute("href","adminpage.html?role=admin");
     } else {
       document.getElementById("menu-if-admin").style.display = "none";
       document.getElementById("menu-if-not-admin").style.display = "block";
+      document.getElementById("user-if-not-admin").style.display = "block";
+      document.getElementById("user-if-admin").style.display = "none";
     }
   </script>
-    </script>
-    <footer>
-      <p>&copy; 2023 Professional Based Learning</p>
-    </footer>
-  </body>
+  </script>
+  <footer>
+    <p>&copy; 2023 Professional Based Learning</p>
+  </footer>
+</body>
+
 </html>
