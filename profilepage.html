@@ -3,7 +3,11 @@
 
 <head>
   <title>User Profile</title>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="styles.css" />
 
   <style>
@@ -87,7 +91,7 @@
       background-color: #45a049;
     }
 
-    footer {
+    /* footer {
       position: fixed;
       bottom: 0;
       left: 0;
@@ -96,6 +100,18 @@
       background-color: #f5f5f5;
       padding: 10px;
       text-align: center;
+      margin-top: 500px;
+    } */
+    footer {
+      position: relative;
+      /* Change from 'fixed' to 'relative' */
+      width: 100%;
+      height: 50px;
+      background-color: #f5f5f5;
+      padding: 10px;
+      text-align: center;
+      margin-top: 20px;
+      /* Add margin-top to create space below the content */
     }
   </style>
 </head>
@@ -122,7 +138,8 @@
       <div class="menu" id="menu-if-admin">
         <!-- <button onclick="openModal()">Post your project</button> -->
         <button><a href="./feeds.html?role=admin">Feeds</a></button>
-        <button id="adminpages_projectapproval"><a id="adminpages_projectapproval_link" href="./projectAproval.html?role=admin">Project Approvals</a></button>
+        <button id="adminpages_projectapproval"><a id="adminpages_projectapproval_link"
+            href="./projectAproval.html?role=admin">Project Approvals</a></button>
         <!-- <button><a href="./profilepage.html?role=admin">Profile</a></button> -->
         <button><a href="./statisticspage.html?role=admin">Statistics</a></button>
         <button><a href="./notifications.html?role=admin">Notifications</a></button>
@@ -130,98 +147,137 @@
       </div>
     </nav>
   </header>
-  <div class="welcome-message">Welcome user</div>
-  <div class="profile-container">
-    <div class="profile-details">
-      <div class="profile-details-item">
-        <label for="name">Name:</label>
-        <span id="name">John Doe</span>
+
+
+
+  <!-- Page Container -->
+  <div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+    <!-- The Grid -->
+    <div class="w3-row-padding">
+
+      <!-- Left Column -->
+      <div class="w3-third">
+
+        <div class="w3-white w3-text-grey w3-card-4">
+          <div class="w3-display-container">
+            <img src="./images/user-profile.png" style="width:100%" alt="Avatar">
+            <div class="w3-display-bottomleft w3-container w3-text-white">
+              <h2>Nick Fury</h2>
+            </div>
+          </div>
+          <div class="w3-container">
+            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Developer</p>
+            <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Maryville, MO, USA</p>
+            <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>nickfury@gmail.com</p>
+            <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>+1 660-529-1234</p>
+            <hr>
+
+            <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
+            <p>Programming</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div>
+            </div>
+            <p>Photography</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">
+                <div class="w3-center w3-text-white">80%</div>
+              </div>
+            </div>
+
+            <p>Media</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">50%</div>
+            </div>
+            <br>
+
+            <p class="w3-large w3-text-theme"><b><i
+                  class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
+            <p>English</p>
+            <div class="w3-light-grey w3-round-xlarge">
+              <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
+            </div>
+            <p>Spanish</p>
+            <div class="w3-light-grey w3-round-xlarge">
+              <div class="w3-round-xlarge w3-teal" style="height:24px;width:55%"></div>
+            </div>
+            <p>French</p>
+            <div class="w3-light-grey w3-round-xlarge">
+              <div class="w3-round-xlarge w3-teal" style="height:24px;width:25%"></div>
+            </div>
+            <br>
+          </div>
+        </div><br>
+
+        <!-- End Left Column -->
       </div>
-      <div class="profile-details-item">
-        <label for="email">Email:</label>
-        <span id="email">johndoe@example.com</span>
+
+      <!-- Right Column -->
+      <div class="w3-twothird">
+
+        <div class="w3-container w3-card w3-white w3-margin-bottom">
+          <h2 class="w3-text-grey w3-padding-16"><i
+              class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Projects History</h2>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Professional Based Learning</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2015</h6>
+            <p>Professional-based learning refers to an approach to education that focuses on acquiring practical skills
+              and knowledge relevant to a specific profession or industry. It emphasizes hands-on experiences,
+              real-world applications, and collaboration with professionals to enhance career readiness and ensure the
+              acquisition of industry-specific competencies.</p>
+            <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Horse Project</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Dec 2018</h6>
+            <p>The horse project involves developing a system for efficiently sorting horses and riders based on their
+              specific characteristics and requirements. It aims to streamline the process of matching suitable
+              horse-rider pairs, ensuring optimal performance and enhancing the overall equestrian experience.</p>
+            <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Database Project</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>March 2020</h6>
+            <p>Database projects involve designing, implementing, and managing databases to store and retrieve data
+              efficiently. These projects focus on creating robust database structures, optimizing query performance,
+              and ensuring data integrity. They play a crucial role in organizing and managing information for various
+              applications, ranging from small-scale systems to large enterprise solutions. </p><br>
+          </div>
+        </div>
+
+        <div class="w3-container w3-card w3-white">
+          <h2 class="w3-text-grey w3-padding-16"><i
+              class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Northwest Missouri State University</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2021 - <span
+                class="w3-tag w3-teal w3-round">Current</span></h6>
+            <p>Master Degree</p>
+            <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>London Business School</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2013 - 2017</h6>
+            <p>Bachelor Degree</p>
+            <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Chicago High School</b></h5>
+
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2005 - 2013</h6>
+            <p>Schooling</p><br>
+          </div>
+        </div>
+
+        <!-- End Right Column -->
       </div>
-      <div class="profile-details-item">
-        <label for="username">Username:</label>
-        <span id="username">johndoe123</span>
-      </div>
-      <div class="profile-details-item">
-        <label for="contact-number">Contact Number:</label>
-        <span id="contact-number">+1 123-456-7890</span>
-      </div>
-      <div class="profile-details-item">
-        <label for="location">User's Location:</label>
-        <span id="location">New York, USA</span>
-      </div>
-      <div class="profile-buttons">
-        <button id="edit-button" onclick="toggleEdit()">Edit</button>
-        <button type="submit" id="save-button" style="display: none" onclick="saveProfile()">
-          Save
-        </button>
-      </div>
+
+      <!-- End Grid -->
     </div>
-    <div class="profile-photo">
-      <img class="profile-picture" src="./images/user-profile.png" />
-    </div>
+
+    <!-- End Page Container -->
   </div>
-
   <script>
-    function toggleEdit() {
-      var editButton = document.getElementById("edit-button");
-      var saveButton = document.getElementById("save-button");
-      var fields = document.querySelectorAll(".profile-details span");
-
-      if (editButton.innerText === "Edit") {
-        editButton.innerText = "Cancel";
-        saveButton.style.display = "inline-block";
-
-        fields.forEach(function (field) {
-          var inputField = document.createElement("input");
-          inputField.value = field.innerText;
-          field.innerHTML = "";
-          field.appendChild(inputField);
-        });
-      } else {
-        editButton.innerText = "Edit";
-        saveButton.style.display = "none";
-
-        fields.forEach(function (field) {
-          var inputField = field.querySelector("input");
-          field.innerHTML = inputField.value;
-        });
-      }
-    }
-
-    function resetFields() {
-      var fields = document.querySelectorAll(".profile-details span");
-
-      fields.forEach(function (field) {
-        var inputField = field.querySelector("input");
-        field.innerHTML = inputField.value;
-      });
-
-      var editButton = document.getElementById("edit-button");
-      var saveButton = document.getElementById("save-button");
-
-      editButton.innerText = "Edit";
-      saveButton.style.display = "none";
-    }
-
-    function saveProfile() {
-      var fields = document.querySelectorAll(".profile-details span");
-
-      fields.forEach(function (field) {
-        var inputField = field.querySelector("input");
-        field.innerHTML = inputField.value;
-      });
-
-      var editButton = document.getElementById("edit-button");
-      var saveButton = document.getElementById("save-button");
-
-      editButton.innerText = "Edit";
-      saveButton.style.display = "none";
-    }
-   
     var url_string = window.location.href;
     var url = new URL(url_string);
     var role = url.searchParams.get("role");
@@ -233,11 +289,16 @@
       document.getElementById("menu-if-admin").style.display = "none";
       document.getElementById("menu-if-not-admin").style.display = "block";
     }
-  </script>
+
   </script>
   <footer>
     <p>&copy; 2023 Professional Based Learning</p>
   </footer>
+</body>
+
+</html>
+
+
 </body>
 
 </html>
