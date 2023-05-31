@@ -1,194 +1,222 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>PBL Home</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" type="text/css" href="styles.css">
-<style>
-body {font-family: "Times New Roman", Georgia, Serif;}
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display";
-  letter-spacing: 5px;
-}
-.w3-margin {
-  margin-top: 80px; /* Add margin-top to create space between navbar and blog entry */
-}
-footer {
-  background-color: #f1f1f1;
-  padding: 20px;
-  text-align: center;
-}
-.pagination {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
+  <title>PBL Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    body {
+      font-family: "Times New Roman", Georgia, Serif;
+    }
 
-.pagination button {
-  background-color: #f1f1f1;
-  border: none;
-  color: black;
-  padding: 8px 16px;
-  text-decoration: none;
-  cursor: pointer;
-  margin: 0 4px;
-  border-radius: 4px;
-}
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Playfair Display";
+      letter-spacing: 5px;
+    }
 
-.pagination button.active {
-  background-color: #4CAF50;
-  color: white;
-}
+    .w3-margin {
+      margin-top: 80px;
+      /* Add margin-top to create space between navbar and blog entry */
+    }
 
-</style>
+    footer {
+      background-color: #f1f1f1;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .pagination button {
+      background-color: #f1f1f1;
+      border: none;
+      color: black;
+      padding: 8px 16px;
+      text-decoration: none;
+      cursor: pointer;
+      margin: 0 4px;
+      border-radius: 4px;
+    }
+
+    .pagination button.active {
+      background-color: #4CAF50;
+      color: white;
+    }
+    .search-card {
+            width: 300px;
+            margin: 0 auto;
+            text-align: center;
+        }
+  </style>
 
 </head>
+
 <body>
-<header>
-  <nav>
-    <div class="logo">
-      <img src="./images/N-Horiz-Full.png" alt="PBL" style="height: 75px; width: 200px;">
-    </div>
-    <span style="font-size: x-large;"><b>Professional Based Learning</b></span>
-    <div class="menu">
-      <a href="homepage.html"><button style="margin-right: 10px;">Home</button></a>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="./images/N-Horiz-Full.png" alt="PBL" style="height: 75px; width: 200px;">
+      </div>
+      <span style="font-size: x-large; margin-left: 20px;"><b>Professional Based Learning</b></span>
+      <div class="menu">
+        <a href="homepage.html"><button style="margin-right: 10px;">Home</button></a>
         <a href="about.html"><button style="margin-right: 10px;">About</button></a>
         <a href="signup.html"><button style="margin-right: 10px;">SignUp</button></a>
         <a href="signin.html"><button style="margin-right: 10px;">SignIn</button></a>
+      </div>
+    </nav>
+  </header>
+  <div id="HomeDiv">
+    <!-- Search Blog entry -->
+    <div class="search-card" style="margin-top: 30px; margin-bottom: 30px; margin-right: 750px;">
+      <div class="search-bar">
+        <input type="text" placeholder="Search" />
+      </div>
     </div>
-  </nav>
-</header>
-<div id="HomeDiv">
-  <hr>
-  <!-- Blog entry -->
-  <div class="w3-card-4 w3-margin w3-white" >
-    <!-- <img src="/w3images/woods.jpg" alt="Nature" style="width:100%"> -->
-    <div class="w3-container">
-      <h3><b>TITLE HEADING</b></h3>
-      <h5>Title description, <span class="w3-opacity">April 7, 2014</span></h5>
-    </div>
+    <!-- Blog entry -->
+    <div class="w3-card-4 w3-margin w3-white">
+      <!-- <img src="/w3images/woods.jpg" alt="Nature" style="width:100%"> -->
+      <div class="w3-container">
+        <h3><b>TITLE HEADING</b></h3>
+        <h5>Title description, <span class="w3-opacity">April 7, 2014</span></h5>
+      </div>
 
-    <div class="w3-container">
-      <p>Project Outline</p>
-      <div class="w3-row">
-        <div class="w3-col m8 s12">
-          <p><button class="w3-button w3-padding-large w3-white w3-border" onclick="showLoginPopup()"><b>READ MORE »</b></button></p>
+      <div class="w3-container">
+        <p>Project Outline</p>
+        <div class="w3-row">
+          <div class="w3-col m8 s12">
+            <p><button class="w3-button w3-padding-large w3-white w3-border" onclick="showLoginPopup()"><b>READ MORE
+                  »</b></button></p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  
-  <hr>
-  <!-- Blog entry -->
-  <div class="w3-card-4 w3-margin w3-white" >
-    <!-- <img src="/w3images/woods.jpg" alt="Nature" style="width:100%"> -->
-    <div class="w3-container">
-      <h3><b>TITLE HEADING</b></h3>
-      <h5>Title description, <span class="w3-opacity">April 7, 2014</span></h5>
-    </div>
 
-    <div class="w3-container">
-      <p>Project Outline</p>
-      <div class="w3-row">
-        <div class="w3-col m8 s12">
-          <p><button class="w3-button w3-padding-large w3-white w3-border" onclick="showLoginPopup()"><b>READ MORE »</b></button></p>
+    <hr>
+    <!-- Blog entry -->
+    <div class="w3-card-4 w3-margin w3-white">
+      <!-- <img src="/w3images/woods.jpg" alt="Nature" style="width:100%"> -->
+      <div class="w3-container">
+        <h3><b>TITLE HEADING</b></h3>
+        <h5>Title description, <span class="w3-opacity">April 7, 2014</span></h5>
+      </div>
+
+      <div class="w3-container">
+        <p>Project Outline</p>
+        <div class="w3-row">
+          <div class="w3-col m8 s12">
+            <p><button class="w3-button w3-padding-large w3-white w3-border" onclick="showLoginPopup()"><b>READ MORE
+                  »</b></button></p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <hr>
-  <!-- Blog entry -->
-  <div class="w3-card-4 w3-margin w3-white" >
-    <!-- <img src="/w3images/woods.jpg" alt="Nature" style="width:100%"> -->
-    <div class="w3-container">
-      <h3><b>TITLE HEADING</b></h3>
-      <h5>Title description, <span class="w3-opacity">April 7, 2014</span></h5>
-    </div>
+    <hr>
+    <!-- Blog entry -->
+    <div class="w3-card-4 w3-margin w3-white">
+      <!-- <img src="/w3images/woods.jpg" alt="Nature" style="width:100%"> -->
+      <div class="w3-container">
+        <h3><b>TITLE HEADING</b></h3>
+        <h5>Title description, <span class="w3-opacity">April 7, 2014</span></h5>
+      </div>
 
-    <div class="w3-container">
-      <p>Project Outline</p>
-      <div class="w3-row">
-        <div class="w3-col m8 s12">
-          <p><button class="w3-button w3-padding-large w3-white w3-border" onclick="showLoginPopup()"><b>READ MORE »</b></button></p>
+      <div class="w3-container">
+        <p>Project Outline</p>
+        <div class="w3-row">
+          <div class="w3-col m8 s12">
+            <p><button class="w3-button w3-padding-large w3-white w3-border" onclick="showLoginPopup()"><b>READ MORE
+                  »</b></button></p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <hr>
-  <!-- Blog entry -->
-  <div class="w3-card-4 w3-margin w3-white" >
-    <!-- <img src="/w3images/woods.jpg" alt="Nature" style="width:100%"> -->
-    <div class="w3-container">
-      <h3><b>TITLE HEADING</b></h3>
-      <h5>Title description, <span class="w3-opacity">April 7, 2014</span></h5>
-    </div>
+    <hr>
+    <!-- Blog entry -->
+    <div class="w3-card-4 w3-margin w3-white">
+      <!-- <img src="/w3images/woods.jpg" alt="Nature" style="width:100%"> -->
+      <div class="w3-container">
+        <h3><b>TITLE HEADING</b></h3>
+        <h5>Title description, <span class="w3-opacity">April 7, 2014</span></h5>
+      </div>
 
-    <div class="w3-container">
-      <p>Project Outline</p>
-      <div class="w3-row">
-        <div class="w3-col m8 s12">
-          <p><button class="w3-button w3-padding-large w3-white w3-border" onclick="showLoginPopup()"><b>READ MORE »</b></button></p>
+      <div class="w3-container">
+        <p>Project Outline</p>
+        <div class="w3-row">
+          <div class="w3-col m8 s12">
+            <p><button class="w3-button w3-padding-large w3-white w3-border" onclick="showLoginPopup()"><b>READ MORE
+                  »</b></button></p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <hr>
-  <!-- Blog entry -->
-  <div class="w3-card-4 w3-margin w3-white" >
-    <!-- <img src="/w3images/woods.jpg" alt="Nature" style="width:100%"> -->
-    <div class="w3-container">
-      <h3><b>TITLE HEADING</b></h3>
-      <h5>Title description, <span class="w3-opacity">April 7, 2014</span></h5>
-    </div>
+    <hr>
+    <!-- Blog entry -->
+    <div class="w3-card-4 w3-margin w3-white">
+      <!-- <img src="/w3images/woods.jpg" alt="Nature" style="width:100%"> -->
+      <div class="w3-container">
+        <h3><b>TITLE HEADING</b></h3>
+        <h5>Title description, <span class="w3-opacity">April 7, 2014</span></h5>
+      </div>
 
-    <div class="w3-container">
-      <p>Project Outline</p>
-      <div class="w3-row">
-        <div class="w3-col m8 s12">
-          <p><button class="w3-button w3-padding-large w3-white w3-border" onclick="showLoginPopup()"><b>READ MORE »</b></button></p>
+      <div class="w3-container">
+        <p>Project Outline</p>
+        <div class="w3-row">
+          <div class="w3-col m8 s12">
+            <p><button class="w3-button w3-padding-large w3-white w3-border" onclick="showLoginPopup()"><b>READ MORE »</b></button></p>
+          </div>
         </div>
       </div>
     </div>
+
   </div>
-  
-</div>
 
-<!-- Pagination -->
-<div class="pagination" style="margin-bottom: 20px;">
-  <button class="active">1</button>
-  <button >2</button>
-  <button>3</button>
-</div>
+  <!-- Pagination -->
+  <div class="pagination" style="margin-bottom: 20px;">
+    <button class="active">1</button>
+    <button>2</button>
+    <button>3</button>
+  </div>
 
-<!-- Login Popup -->
-<div id="loginPopup" class="w3-modal">
-  <div class="w3-modal-content w3-card-4" style="margin-top: 200px; width: 400px; height: 200px;">
-    <header class="w3-container w3-teal">
-      <span onclick="hideLoginPopup()" class="w3-button w2-large w3-display-topright">&times;</span>
-      <h2>SignIn Required</h2>
-    </header>
-    <div class="w3-container">
-      <p style="font-size: larger;"><br>&nbsp;&nbsp;&nbsp;Please SignIn to read the full article.</p>
+  <!-- Login Popup -->
+  <div id="loginPopup" class="w3-modal">
+    <div class="w3-modal-content w3-card-4" style="margin-top: 200px; width: 400px; height: 200px;">
+      <header class="w3-container w3-teal">
+        <span onclick="hideLoginPopup()" class="w3-button w2-large w3-display-topright">&times;</span>
+        <h2>SignIn Required</h2>
+      </header>
+      <div class="w3-container">
+        <p style="font-size: larger;"><br>&nbsp;&nbsp;&nbsp;Please SignIn to read the full article.</p>
+      </div>
     </div>
   </div>
-</div>
-<script>
-  function showLoginPopup() {
-    var popup = document.getElementById("loginPopup");
-    popup.style.display = "block";
-  }
+  <script>
+    function showLoginPopup() {
+      var popup = document.getElementById("loginPopup");
+      popup.style.display = "block";
+    }
 
-  function hideLoginPopup() {
-    var popup = document.getElementById("loginPopup");
-    popup.style.display = "none";
-  }
-</script>
-<footer>
-  <p>&copy; 2023 Professional Based Learning</p>
-</footer>
+    function hideLoginPopup() {
+      var popup = document.getElementById("loginPopup");
+      popup.style.display = "none";
+    }
+  </script>
+  <footer>
+    <p>&copy; 2023 Professional Based Learning</p>
+  </footer>
 
 </body>
+
 </html>
