@@ -114,6 +114,15 @@
         <input type="submit" value="SignIn" style="margin-top: 20px;">
     </form>
 
+    <script>
+        // onsubmit="return setAction(this);
+        function setAction(form) {
+            form.action = "./feeds.html?role='admin'"
+            alert(form.action);
+            return false;
+        }
+    </script>
+
     <footer>
         <p>&copy; 2023 Professional Based Learning</p>
     </footer>

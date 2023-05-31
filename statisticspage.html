@@ -1,70 +1,98 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>PBL Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-    <style>
-      body {
-        font-family: "Times New Roman", Georgia, Serif;
-      }
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Playfair Display";
-        letter-spacing: 5px;
-      }
-      .w3-margin {
-        margin-top: 80px; /* Add margin-top to create space between navbar and blog entry */
-      }
-      footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 50px;
-        background-color: #f5f5f5;
-        padding: 10px;
-        text-align: center;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div class="logo">
-          <img
-            src="./images/N-Horiz-Full.png"
-            alt="PBL"
-            style="height: 75px; width: 200px"
-          />
-        </div>
-        <div class="search-bar">
-          <input type="text" placeholder="Search" />
-        </div>
-        <div class="menu">
-          <button><a href="./feeds.html">Feeds</a></button>
-          <button><a href="./profilepage.html">Profile</a></button>
-          <button><a href="./statisticspage.html">Statistics</a></button>
-          <button><a href="./notifications.html">Notifications</a></button>
-          <button><a href="./homepage.html">SignOut</a></button>
-        </div>
-      </nav>
-    </header>
 
-    <hr />
+<head>
+  <title>PBL Home</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <style>
+    body {
+      font-family: "Times New Roman", Georgia, Serif;
+    }
 
-    <div class="content">
-      <h2>Statistics page under maintainance</h2>
-    </div>
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Playfair Display";
+      letter-spacing: 5px;
+    }
 
-    <footer>
-      <p>&copy; 2023 Professional Based Learning</p>
-    </footer>
-  </body>
+    .w3-margin {
+      margin-top: 80px;
+      /* Add margin-top to create space between navbar and blog entry */
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      background-color: #f5f5f5;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="./images/N-Horiz-Full.png" alt="PBL" style="height: 75px; width: 200px" />
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search" />
+      </div>
+      <div class="menu" id="menu-if-not-admin">
+        <!-- <button onclick="openModal()">Post your project</button> -->
+        <button><a href="./feeds.html">Feeds</a></button>
+        <button><a href="./profilepage.html">Profile</a></button>
+        <!-- <button><a href="./statisticspage.html">Statistics</a></button> -->
+        <button><a href="./notifications.html">Notifications</a></button>
+        <button><a href="./homepage.html">SignOut</a></button>
+      </div>
+      <div class="menu" id="menu-if-admin">
+        <!-- <button onclick="openModal()">Post your project</button> -->
+        <button><a href="./feeds.html?role=admin">Feeds</a></button>
+        <button id="adminpages_projectapproval"><a id="adminpages_projectapproval_link"
+            href="./projectAproval.html?role=admin">Project Approvals</a></button>
+        <button><a href="./profilepage.html?role=admin">Profile</a></button>
+        <!-- <button><a href="./statisticspage.html?role=admin">Statistics</a></button> -->
+        <button><a href="./notifications.html?role=admin">Notifications</a></button>
+        <button><a href="./homepage.html?role=admin">SignOut</a></button>
+      </div>
+    </nav>
+  </header>
+
+  <hr />
+
+  <div class="content">
+    <h2>Statistics page under maintainance</h2>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 Professional Based Learning</p>
+  </footer>
+  <script>
+    var url_string = window.location.href;
+    var url = new URL(url_string);
+    var role = url.searchParams.get("role");
+    if (role == "admin") {
+      document.getElementById("menu-if-not-admin").style.display = "none";
+      document.getElementById("menu-if-admin").style.display = "block";
+      // document.getElementById("adminpages_projectapproval_link").setAttribute("href","adminpage.html?role=admin");
+    } else {
+      document.getElementById("menu-if-admin").style.display = "none";
+      document.getElementById("menu-if-not-admin").style.display = "block";
+    }
+  </script>
+
+</body>
+
 </html>

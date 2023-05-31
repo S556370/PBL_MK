@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>PBL Home</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <link rel="stylesheet" type="text/css" href="NewPostForm.css" />
+
+  <style>
+    body {
+      font-family: "Times New Roman", Georgia, Serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Playfair Display";
+      letter-spacing: 2px;
+    }
+
+    .w3-margin {
+      margin-top: 80px;
+      /* Add margin-top to create space between navbar and blog entry */
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      background-color: #f5f5f5;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="./images/N-Horiz-Full.png" alt="PBL" style="height: 75px; width: 200px" />
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search" />
+      </div>
+      <div class="menu" id="menu-if-not-admin">
+        <button id="adminpages_projectapproval"><a id="adminpages_projectapproval_link" href="./feeds.html">Feeds</a></button>
+        <button><a href="./profilepage.html">Profile</a></button>
+        <button><a href="./statisticspage.html">Statistics</a></button>
+        <button><a href="./notifications.html">Notifications</a></button>
+        <button><a href="./homepage.html">SignOut</a></button>
+      </div>
+      <div class="menu" id="menu-if-admin">
+        <button id="adminpages_projectapproval"><a id="adminpages_projectapproval_link" href="./feeds.html?role=admin">Feeds</a></button>
+        <button><a href="./profilepage.html?role=admin">Profile</a></button>
+        <button><a href="./statisticspage.html?role=admin">Statistics</a></button>
+        <button><a href="./notifications.html?role=admin">Notifications</a></button>
+        <button><a href="./homepage.html?role=admin">SignOut</a></button>
+      </div>
+    </nav>
+  </header>
+
+  <hr />
+
+  <div id="form-popup" class="form-popup">
+    <form id="form-container" class="form-container">
+      <label for="createNewProject-title">
+        <h2>Create a New Project</h2>
+      </label>
+      <br />
+
+      <label for="project-title" style="margin-top: 10px">Project Title:</label>
+      <input type="text" id="project-title" name="project-title" required />
+      <br /><br />
+
+      <label for="project description" style="margin-top: 20px">Project Description:</label><br />
+      <textarea id="project-description" name="project-description" rows="10" cols="50" required></textarea>
+      <br /><br />
+
+      <label for="attachments">Attachments:</label>
+      <input type="text" id="attachments" name="attachments" />
+      <button type="button">Attach Files</button>
+      <br /><br />
+
+      <label>Privacy:</label>
+      <input type="radio" id="private" name="privacy" value="private" checked />
+      <label for="private">Private</label>
+      <input type="radio" id="public" name="privacy" value="public" />
+      <label for="public">Public</label> <br /><br />
+      <button type="submit" id="submit" name="submit">Submit</button>
+      <button type="button" id="cancel" name="cancel">cancel</button>
+    </form>
+  </div>
+
+  <!-- Blog entry 1 -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <!-- <img src="/w3images/woods.jpg" alt="Nature" style="width:100%"> -->
+    <div class="w3-container">
+      <h3><b>Weather Forecast</b></h3>
+      <h5>
+        Build a program that retrieves weather data from an API and displays it to the user..​
+        <span class="w3-opacity">April 7, 2014</span>
+      </h5>
+    </div>
+
+    <div class="w3-container">
+      <div id="projectDescription1" class="project-description" style="display: none">
+        <p>
+          Weather Forecast, description goes here...​
+        </p>
+      </div>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <p>
+            <button class="w3-button w3-padding-large w3-white w3-border" id="readMoreButton1" onclick="readMore(1)">
+              <b>READ MORE »</b>
+            </button> 
+            <button class="w3-button w3-padding-large w3-white w3-border">
+              <b>Approve Project</b>
+            </button>
+            <button class="w3-button w3-padding-large w3-white w3-border"            >
+            <b>Reject Project</b>
+            </button>
+          </p>           
+        </div>        
+      </div>
+      <div id="projectDescription1" class="project-description" style="display: none">
+        <p>Project description goes here...</p>
+      </div>
+    </div>
+  </div>
+  <hr/>
+
+  <!-- Blog entry 2 -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <!-- <img src="/w3images/woods.jpg" alt="Nature" style="width:100%"> -->
+    <div class="w3-container">
+      <h3><b>To-Do List App</b></h3>
+      <h5>
+        Develop a simple application that allows users to create, manage, and prioritize tasks, <span class="w3-opacity">April 7, 2014</span>
+      </h5>
+    </div>
+
+    <div class="w3-container">
+      <div id="projectDescription2" class="project-description" style="display: none">
+        <p>To-Do List App description goes here...</p>
+      </div>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <p>
+            <button class="w3-button w3-padding-large w3-white w3-border" id="readMoreButton2" onclick="readMore(2)">
+              <b>READ MORE »</b>
+            </button>
+            <button class="w3-button w3-padding-large w3-white w3-border">
+              <b>Approve Project</b>
+            </button>
+            <button class="w3-button w3-padding-large w3-white w3-border"            >
+            <b>Reject Project</b>
+            </button>
+          </p>          
+        </div>        
+      </div>
+    </div>
+  </div>
+  <hr/>
+
+    <!-- Blog entry 3 -->
+    <div class="w3-card-4 w3-margin w3-white">
+      <!-- <img src="/w3images/woods.jpg" alt="Nature" style="width:100%"> -->
+      <div class="w3-container">
+        <h3><b>Expense Tracker</b></h3>
+        <h5>
+          Develop an application to track personal expenses, allowing users to add, categorize, and analyze their spending, <span class="w3-opacity">April 7, 2014</span>
+        </h5>
+      </div>
+  
+      <div class="w3-container">
+        <div id="projectDescription3" class="project-description" style="display: none">
+          <p>Expense Tracker description goes here...</p>
+        </div>
+        <div class="w3-row">
+          <div class="w3-col m8 s12">
+            <p>
+              <button class="w3-button w3-padding-large w3-white w3-border" id="readMoreButton3" onclick="readMore(3)">
+                <b>READ MORE »</b>
+              </button>
+              <button class="w3-button w3-padding-large w3-white w3-border">
+                <b>Approve Project</b>
+              </button>
+              <button class="w3-button w3-padding-large w3-white w3-border"            >
+              <b>Reject Project</b>
+              </button>
+            </p>          
+          </div>        
+        </div>
+      </div>
+    </div>
+    <hr/>
+
+        <!-- Blog entry 4 -->
+        <div class="w3-card-4 w3-margin w3-white">
+          <!-- <img src="/w3images/woods.jpg" alt="Nature" style="width:100%"> -->
+          <div class="w3-container">
+            <h3><b>Personal Budget Planner</b></h3>
+            <h5>
+              Design an application that helps users create and manage a personal budget, tracking income, expenses, and savings, <span class="w3-opacity">July 7, 2023</span>
+            </h5>
+          </div>
+      
+          <div class="w3-container">
+            <div id="projectDescription4" class="project-description" style="display: none">
+              <p>Personal Budget Planner, description goes here...</p>
+            </div>
+            <div class="w3-row">
+              <div class="w3-col m8 s12">
+                <p>
+                  <button class="w3-button w3-padding-large w3-white w3-border" id="readMoreButton4" onclick="readMore(4)">
+                    <b>READ MORE »</b>
+                  </button>
+                  <button class="w3-button w3-padding-large w3-white w3-border">
+                    <b>Approve Project</b>
+                  </button>
+                  <button class="w3-button w3-padding-large w3-white w3-border"            >
+                  <b>Reject Project</b>
+                  </button>
+                </p>          
+              </div>        
+            </div>
+          </div>
+        </div>
+        <hr/>
+
+  <script>
+    var projectDescriptionVisible = false;
+
+    function readMore(projectId) {
+      var projectDescription = document.getElementById(
+        "projectDescription" + projectId
+      );
+      var readMoreButton = document.getElementById(
+        "readMoreButton" + projectId
+      );
+
+      if (projectDescription.style.display === "none") {
+        projectDescription.style.display = "block";
+        readMoreButton.innerHTML = "<b>READ LESS «</b>";
+      } else {
+        projectDescription.style.display = "none";
+        readMoreButton.innerHTML = "<b>READ MORE »</b>";
+      }
+    }
+
+
+
+    // Form Script
+
+    function openModal() {
+      
+      document.getElementById("form-popup").style.display = "block";
+      var cancelButton = document.getElementById("cancel");
+      cancelButton.addEventListener("click", cancelForm);
+    }
+
+    function attachFiles() {
+      console.log("Attach files button clicked");
+    }
+
+    function cancelForm() {
+      console.log("Form canceled");
+      document.getElementById("form-popup").style.display = "none";
+    }
+
+    var url_string = window.location.href;
+    var url = new URL(url_string);
+    var role = url.searchParams.get("role");
+    if (role == "admin") {
+      document.getElementById("menu-if-not-admin").style.display = "none";
+      document.getElementById("menu-if-admin").style.display = "block";
+      // document.getElementById("adminpages_projectapproval_link").setAttribute("href","adminpage.html?role=admin");
+    } else {
+      document.getElementById("menu-if-admin").style.display = "none";
+      document.getElementById("menu-if-not-admin").style.display = "block";
+    }
+  </script>
+  <footer>
+    <p>&copy; 2023 Professional Based Learning</p>
+  </footer>
+</body>
+
+</html>
