@@ -38,7 +38,7 @@
         .form-container input[type="submit"] {
             display: block;
             width: 100%;
-            margin-bottom: 10px;
+            margin-bottom: 1px;
             padding: 10px;
             font-size: 16px;
             border: none;
@@ -80,7 +80,7 @@
         </nav>
     </header>
 
-    <form id="form-container" class="form-container" action="./signin.html" >
+    <!-- <form id="form-container" class="form-container" action="./signin.html" >
         <label for="fname">First Name:</label>
         <input type="text" id="fname" name="fname" required>       
         <label for="lname">Last Name:</label>
@@ -94,7 +94,32 @@
         <input type="submit" value="SignUp" style="margin-top: 20px;"><br>
         <Span style="font-size: 18px; margin-top: 10px;"> Already a user, please<a href="./signin.html" style=" color: blue; text-decoration: underline"> SignIn.</a></Span><br>
     
+    </form> -->
+    <form id="form-container" class="form-container" action="./signin.html">
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" required>
+    
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname" required>
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="mobile">Mobile:</label>
+        <input type="tel" id="mobile" name="mobile" required>
+    
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+    
+        <label for="terms">Terms and Conditions:</label>
+        <input type="checkbox" id="terms" name="terms" required>
+        <span style="font-size: 14px;">I agree to the <a href="#" style="color: blue; text-decoration: underline;">Terms and Conditions</a></span>
+    
+        <input type="submit" value="SignUp" style="margin-top: 20px;"><br>
+    
+        <span style="font-size: 18px; margin-top: 10px;">Already a user, please <a href="./signin.html" style="color: blue; text-decoration: underline">SignIn</a>.</span><br>
     </form>
+    
     
 
     <footer>
