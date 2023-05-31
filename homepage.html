@@ -59,6 +59,21 @@
             margin: 0 auto;
             text-align: center;
         }
+        input[type=text] {
+      width: 30%;
+      -webkit-transition: width 0.15s ease-in-out;
+      transition: width 0.15s ease-in-out;
+   }
+ 
+   /* When the input field gets focus,
+        change its width to 100% */
+   input[type=text]:focus {
+     width: 70%;
+   }
+   #list{
+    font-size:  1.5em;
+    margin-left: 90px;
+   }    
   </style>
 
 </head>
@@ -80,9 +95,11 @@
   </header>
   <div id="HomeDiv">
     <!-- Search Blog entry -->
-    <div class="search-card" style="margin-top: 30px; margin-bottom: 30px; margin-right: 750px;">
+    <div class="search-card" id="searchData1" style="margin-top: 30px; margin-bottom: 30px; margin-right: 750px;">
       <div class="search-bar">
-        <input type="text" placeholder="Search" />
+        <input type="text" id="searchInput" placeholder="Search" />
+
+        <script src="./search.js"></script>
       </div>
     </div>
     <!-- Blog entry -->
@@ -212,6 +229,8 @@
       var popup = document.getElementById("loginPopup");
       popup.style.display = "none";
     }
+
+
   </script>
   <footer>
     <p>&copy; 2023 Professional Based Learning</p>
